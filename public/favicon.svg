@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>favicon svg treblle</title>
+    <g id="favicon-svg-treblle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BLUE-SHIELD" transform="translate(0.000000, 0.000000)" fill-rule="nonzero">
+            <path d="M15.98798,0 L0,0 L0,7.83305509 C0,12.2136895 3.57262104,15.7595993 7.99465776,15.7595993 C12.4166945,15.7595993 16,12.2136895 16,7.83305509" id="Path" fill="#0047BB"></path>
+            <polygon id="Path" fill="#FFFFFF" points="9.75893155 3.24540902 9.7375626 3.24540902 6.30383973 6.12086811 6.30383973 3.24540902 6.28113523 3.24540902 2.839399 6.12621035 2.839399 6.1409015 6.29582638 6.1409015 6.29582638 12.4500835 9.75893155 12.4500835 9.75893155 6.1409015 12.0440735 6.1409015 12.0440735 3.24540902"></polygon>
+        </g>
+    </g>
+</svg>

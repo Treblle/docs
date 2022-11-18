@@ -1,0 +1,36 @@
+---
+title: Treblle for Ruby
+description: Integrating Treblle in Ruby
+layout: ../../../layouts/MainLayout.astro
+---
+
+## Requirements
+* Ruby 2.0+
+* Ruby on Rails 4.0+
+
+## Installation
+
+Add the gem to your Gemfile:
+
+```rb
+# Gemfile
+gem "treblle", "~> 1.0.3"
+```
+
+Then add following line to `config/application.rb`, or if you want to include it to specific environment only, then e.g. `config/environments/development.rb` which registers Treblle middleware.
+
+```rb
+config.middleware.use(Treblle)
+```
+
+Finally, make sure to set environemnt variables as described below:
+
+| Variable                | Description                                                                      |
+| :----------------       | :--------------------------------------------------------------------------------|
+| TREBLLE_API_KEY         | (required) Valid API key obtained during registration on treblle.com             |
+| TREBLLE_PROJECT_ID      | (required) Valid Project ID obtained after creating a new project on treblle.com |
+| TREBLLE_SENSITIVE_FIELDS| (optional) Additional optional keys that will be masked before sending to Treblle|
+
+`TREBLLE_SENSITIVE_FIELDS` should be comma separated values like: `cc_number,cvv,dont_show_this_field`.
+
+Note: if using `dotenv` or similar library in development to load environment variables, make sure to have this gem loaded AFTER dotenv, othewise variables may not be set. To be on the safe side when running locally you can use `export` command. In production make sure these variables are set following provider service docs.
