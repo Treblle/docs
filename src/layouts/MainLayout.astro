@@ -13,8 +13,6 @@ import { getPreviousAndNextLinks } from '../utils/get-nav-links'
 
 const navLinks = getNavLinks()
 const { previous, next } = getPreviousAndNextLinks(navLinks, Astro)
-console.log({previous})
-console.log({next})
 
 type Props = {
 	frontmatter: CONFIG.Frontmatter;
