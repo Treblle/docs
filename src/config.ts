@@ -53,7 +53,7 @@ export const SIDEBAR: Sidebar = {
       // { text: 'Service status', link: 'en/service-status' },
 		],
     'Dashboard': [
-    	{ text: 'Introduction', link: 'en/dashboard' },
+    	{ text: 'Overview', link: 'en/dashboard' },
       { text: 'Projects', link: 'en/dashboard/projects' },
       { text: 'Endpoints', link: 'en/dashboard/endpoints' },
       { text: 'Requests', link: 'en/dashboard/requests' },
