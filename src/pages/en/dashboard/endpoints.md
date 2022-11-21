@@ -4,7 +4,7 @@ description: Endpoints are used to represent a part of your API that can be acce
 layout: ../../../layouts/MainLayout.astro
 ---
 
-Your API endpoints are the URIs that exposes a particular part of your API for communications via [requests](/en/requests).
+Your API endpoints are the URIs that exposes a particular part of your API for communications via [requests](/en/dashboard/requests).
 
 Once you have integrated your API with Treblle and your API start receiving requests, Treblle will automatically identify the endpoints in your API and aggregate them for you in the **Endpoints** tab of your project dashboard.
 

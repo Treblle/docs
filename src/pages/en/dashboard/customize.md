@@ -4,7 +4,7 @@ description: Build a custom dashboard for your Treblle projects in a few clicks 
 layout: ../../../layouts/MainLayout.astro
 ---
 
-You can quickly build custom dashboard for your Treblle [projects](/en/projects) in a few clicks and focus in on the data you want to see at a glance.
+You can quickly build custom dashboard for your Treblle [projects](/en/dashboard/projects) in a few clicks and focus in on the data you want to see at a glance.
 
 ## Widgets
 

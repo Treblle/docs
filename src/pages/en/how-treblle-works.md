@@ -12,4 +12,4 @@ Once you've integrated a Treblle SDK in your codebase, this SDK will send reques
 
 In your Treblle Dashboard you get to see real-time requests to your API, auto-generated API docs, API analytics like how fast the response was for an endpoint, the load size of the response, etc.
 
-Treblle also uses the requests sent to your Dashboard to calculate your [API score](/en/api-score) which is a quality score that's calculated based on the performance, quality, and security best practices for your API.
+Treblle also uses the requests sent to your Dashboard to calculate your [API score](/en/dashboard/api-score) which is a quality score that's calculated based on the performance, quality, and security best practices for your API.

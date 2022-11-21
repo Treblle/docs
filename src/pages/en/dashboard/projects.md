@@ -53,6 +53,8 @@ Your project ID will be underneath your project's name in the project's dashbaor
 ## Transfer project
 If you no longer wnat to be the owner of a project, you can transfer the project to a team member by heading over to the settings tab in the project dashboard and clicking on the **Transfer project** button and following the instructions to transfer the project.
 
+## Leave project
+To leave a project, head over to the settings tab in the project dashboard and click the **I want to leave** button. A confirmation modal will appear for you to click on **Confirm** if you want to proceed.
 ## Delete project
 > When you delete a project, Treblle can no longer retrieve your data.
 
