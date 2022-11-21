@@ -5,7 +5,7 @@ on:
       - develop
 jobs:
   - name: Markdown links check - check only 'docs' directory and exclude CHANGELOG.md
-  uses: ruzickap/action-my-markdown-link-checker@v1
-  with:
-    search_paths: src/pages
-    verbose: true
+    uses: ruzickap/action-my-markdown-link-checker@v1
+    with:
+      search_paths: src/pages
+      verbose: true
