@@ -10,8 +10,8 @@ layout: ../../../layouts/MainLayout.astro
 
 ## Installation
 
-To install the SDK you will need to be using [Composer]([https://getcomposer.org/)
-in your project. To install it please see the [docs](https://getcomposer.org/download/).
+To install the SDK you will need to be using [Composer]([https://getcomposer.org)
+in your project. To install it please see the [docs](https://getcomposer.org/download).
 
 ```bash
 composer require treblle/treblle-symfony
