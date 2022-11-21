@@ -1,11 +1,23 @@
-name: markdown-link-check
+name: Check Markdown links
 on:
+  pull_request:
+    paths:
+    # Only run on changes to .md files
+    - '**.md'
   push:
     branches:
-      - develop
+    - main
+    - develop
+  schedule:
+  # Run everyday at 9:00 AM (See https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07)
+  - cron: "0 9 * * *"
+permissions:
+  contents: read
 jobs:
-  - name: Markdown links check - check only 'docs' directory and exclude CHANGELOG.md
-    uses: ruzickap/action-my-markdown-link-checker@v1
-    with:
-      search_paths: src/pages
-      verbose: true
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check links
+      uses: ruzickap/action-my-markdown-link-checker@v1
+      with:
+        search_paths: 'src/pages'
