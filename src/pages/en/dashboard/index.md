@@ -9,7 +9,7 @@ The Treblle Dashboard provides you with a unified user interface for monitoring 
 You have instant access to the dashboard after <a href="https://app.treblle.com/register" target="_blank">creating a Treblle account</a> or visiting your <a href="https://app.treblle.com">dashboard</a> if you already have an account.
 
 
-In the dashboard you see a list of all your [projects](/en/projects), get access to your API key which you will need for integrating a Treblle SDK in your codebase and so much more.
+In the dashboard you see a list of all your [projects](/en/dashboard/projects), get access to your API key which you will need for integrating a Treblle SDK in your codebase and so much more.
 
 
 ## Accessing your API key
