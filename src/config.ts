@@ -31,7 +31,7 @@ export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 export const GITHUB_EDIT_URL = `https://github.com/Treblle/docs/tree/main`;
 
-export const COMMUNITY_INVITE_URL = `https://treblle.com/chat`;
+export const COMMUNITY_INVITE_URL = `https://app.treblle.com/chat`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
