@@ -17,7 +17,8 @@ jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
     steps:
-    - name: Check links
+    - uses: actions/checkout@master
+    - name: Check links v2
       uses: ruzickap/action-my-markdown-link-checker@v1
       with:
         search_paths: |
