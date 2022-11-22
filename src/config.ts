@@ -6,7 +6,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'http://localhost:3000/default-og-image.png',
+		src: 'https://docs.treblle.com/default-og-image.png',
 		alt: 'Beautiful Treblle Logo'
 
 	},
