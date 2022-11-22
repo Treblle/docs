@@ -28,6 +28,7 @@
 	--color-base-red: 351, 100%;
 	--color-base-yellow: 41, 100%;
   --color-treblle-blue: #0047bb;
+  --color-treblle-black: #2D3F58;
 
 	/*
    * Color palettes are made using --color-base
@@ -59,6 +60,7 @@
 
 :root {
 	color-scheme: light;
+  --theme-logo-wordmark: var(--color-treblle-black);
   --theme-logo: var(--color-treblle-blue);
 	--theme-accent: hsla(var(--color-blue), 1);
 	--theme-text-accent: hsla(var(--color-blue), 1);
@@ -96,6 +98,7 @@ body {
 	--theme-text: hsla(var(--color-gray-90), 1);
 	--theme-text-light: hsla(var(--color-gray-80), 1);
   --theme-logo: var(--theme-text);
+  --theme-logo-wordmark: var(--theme-text);
 
 	/* @@@: not used anywhere */
 	--theme-text-lighter: hsla(var(--color-gray-40), 1);
