@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Treblle is makes working with APIs less complicated, frustrating and confusing. With Treblle you can monitor and observe your the actual real-world usage of your APIs.
+description: Treblle makes working with APIs less complicated, frustrating and confusing. With Treblle you can monitor and observe the actual real-world usage of your APIs.
 layout: ../../layouts/MainLayout.astro
 ---
 
