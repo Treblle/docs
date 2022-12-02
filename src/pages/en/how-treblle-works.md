@@ -4,7 +4,7 @@ description: Treblle works by providing an SDK for programming languages and fra
 layout: ../../layouts/MainLayout.astro
 ---
 
-When you <a href="https://treblle.com/register" target="_blank">get started</a> with Treblle, you get a [Treblle Dashboard](/en/dashboard) and a ton of SDKs you can pick from to connect your API codebase to Treblle.
+When you <a href="https://app.treblle.com/register" target="_blank">get started</a> with Treblle, you get a [Treblle Dashboard](/en/dashboard) and a ton of SDKs you can pick from to connect your API codebase to Treblle.
 
 > You can check out the integration section of the docs to pick the language or framework your API is built on.
 
