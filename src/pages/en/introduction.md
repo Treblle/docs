@@ -22,7 +22,7 @@ By integrating Treblle to your API, you get the following features out of the bo
 
 ## Getting Started
 
-To get started with Treblle, <a href="https://treblle.com/register" target="_blank">sign up</a> for a free account. Then check the integrations section for information on how to integrate Treblle in your project. We've covered most of all the popular backend languages and frameworks out there.
+To get started with Treblle, <a href="https://app.treblle.com/register" target="_blank">sign up</a> for a free account. Then check the integrations section for information on how to integrate Treblle in your project. We've covered most of all the popular backend languages and frameworks out there.
 
 Found a missing integrations or your language of framework is not in the docs? Please suggest it on Discord <a href="https://app.treblle.com/chat">#integration-ideas channel</a> and even consider adding it yourself on GitHub.
 
