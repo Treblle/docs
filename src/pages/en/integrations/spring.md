@@ -1,6 +1,6 @@
 ---
-title: Treblle for Spring
-description: Integrating Treblle in Spring
+title: Treblle for Spring(Java)
+description: Integrating Treblle in Spring/Java
 layout: ../../../layouts/MainLayout.astro
 ---
 

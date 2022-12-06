@@ -1,6 +1,6 @@
 ---
-title: Treblle for Django
-description: Integrating Treblle in Django
+title: Treblle for Django(Python)
+description: Integrating Treblle in Django/Python
 layout: ../../../layouts/MainLayout.astro
 ---
 ## Requirements
