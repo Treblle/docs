@@ -82,8 +82,8 @@ export const SIDEBAR: Sidebar = {
       { text: 'Node', link: 'en/integrations/node'},
       { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
       { text: 'DirectUs', link: 'en/integrations/directus' },
-      { text: 'Django', link: 'en/integrations/django' },
-      { text: 'Spring', link: 'en/integrations/spring' },
+      { text: 'Django(Python)', link: 'en/integrations/django' },
+      { text: 'Spring(Java)', link: 'en/integrations/spring' },
       { text: 'Community SDKs', link: 'en/integrations/community-sdks' }
     ],
 	},
