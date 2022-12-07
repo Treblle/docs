@@ -4,6 +4,8 @@ description: A flow is a series of API requests it takes to achieve a particular
 layout: ../../../layouts/MainLayout.astro
 ---
 
+> Watch this <a target="_blank" href="youtube.com/watch?v=Iizl4eFTWms">screencast</a> for an overview of Flows.
+
 A series of API calls is called a Flow in Treblle.
 
 Flows lets you group API [requests](/en/dashboard/requests) that together are used to achieve a particular task like registering a user.
