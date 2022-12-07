@@ -4,6 +4,8 @@ description: Problems are code base errors captured by the Treblle SDK. When Tre
 layout: ../../../layouts/MainLayout.astro
 ---
 
+> Watch this <a target="_blank" href="https://youtu.be/tqjh7a_CsSI">screencast</a> for an overview of Problems.
+
 Problems are code base errors captured by the Treblle SDK. When Treblle captures an error we will show it in the problems tab of a project
 
 Treblle captures both codebase errors and non-codebase errors for example, Treblle can check misspelling that might cause problems in your API [documentations](/en/dashboard/api-documentation).

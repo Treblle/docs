@@ -3,6 +3,7 @@ title: Customize your dashboard
 description: Build a custom dashboard for your Treblle projects in a few clicks and focus in on the data you want to see.
 layout: ../../../layouts/MainLayout.astro
 ---
+> Watch this <a target="_blank" href="https://youtu.be/tYUOId4WiTY">screencast</a> on how to customize your dashboard.
 
 You can quickly build custom dashboard for your Treblle [projects](/en/dashboard/projects) in a few clicks and focus in on the data you want to see at a glance.
 
