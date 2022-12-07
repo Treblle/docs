@@ -14,6 +14,8 @@ A project can be:
 * a new [environment](/en/dashboard/projects#environment) for your API
 
 ## Creating a project
+> Watch this <a target="_blank" href="https://youtu.be/3pBIJhua7ac">screencast</a> on how to create a project.
+
 To create a project, <a href="https://app.treblle.com/login" target="_blank">log in</a> to Treblle and head over to your Treblle <a href="https://app.treblle.com">dashboard</a>, click on the <a href="https://app.treblle.com/projects/create" target="_blank">Create new project</a> link and you will be presented with a form in the next page to fill in required details for your new project.
 
 To create a project the following details are needed.
