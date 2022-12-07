@@ -84,6 +84,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'DirectUs', link: 'en/integrations/directus' },
       { text: 'Django(Python)', link: 'en/integrations/django' },
       { text: 'Spring(Java)', link: 'en/integrations/spring' },
+      { text: 'Fastify', link: 'en/integrations/fastify'},
       { text: 'Community SDKs', link: 'en/integrations/community-sdks' }
     ],
 	},
