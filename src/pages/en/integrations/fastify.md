@@ -44,7 +44,6 @@ const treblleFastify = require('treblle-fastify')
 fastiy.register(treblleFastify, {
   apiKey: process.env.TREBLLE_API_KEY,
   projectId: process.env.TREBLLE_PROJECT_ID,
-  additionalFieldsToMask: ['licensee_key'],
-  showErros: false
+  additionalFieldsToMask: ['licensee_key']
 })
 ```
