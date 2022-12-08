@@ -34,7 +34,6 @@ The `treblle-fastify` plugin can optionally take the following properties.
 * [`apiKey`](/en/dashboard#accessing-your-api-key)
 * [`projectId`](/en/dashboard/projects#project-id)
 * `additionalFieldsToMask` - defaults to an empty array `[]`
-* `showErrors` - defaults to `true`
 
 For example you can setup the `treblle-fastify` plugin like so:
 
