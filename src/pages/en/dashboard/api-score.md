@@ -4,6 +4,8 @@ description: Treblle measures the quality of APIs to try to make sure that the A
 layout: ../../../layouts/MainLayout.astro
 ---
 
+> Watch this <a target="_blank" href="https://youtu.be/xheP8TYOePY">screencast</a> for an overview of the API Score.
+
 Treblle measures the quality of APIs to make sure that the API follows a standard set of best practices.
 
 Treblle measures API Scores across 3 categories
