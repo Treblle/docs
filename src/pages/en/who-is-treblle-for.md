@@ -4,7 +4,7 @@ description: Treblle is for both builders and consumers of APIs so from DevOps t
 layout: ../../layouts/MainLayout.astro
 ---
 
-Treblle was designed and created for developers by developers who typically build and consume APIs.
+Treblle was designed for both non-technical roles that monitor, analyze and manage APIs, and technical roles that build, ship and maintain them on daily basis.
 
 **Application programming interfaces(APIs)** are used to communicate and transfer information back and forth between a client(website, app, IoT, watch, phone, car, game, tv, etc) and a database.
 
