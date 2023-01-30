@@ -72,8 +72,8 @@ export const SIDEBAR: Sidebar = {
     'Product': [
     	{ text: 'dashboard', link: 'en/dashboard' },
       { text: 'Projects', link: 'en/dashboard/projects' },
-      { text: 'Endpoints', link: 'en/dashboard/endpoints' },
       { text: 'Requests', link: 'en/dashboard/requests' },
+      { text: 'Endpoints', link: 'en/dashboard/endpoints' },
       { text: 'Problems', link: 'en/dashboard/problems' },
       { text: 'Flows', link: 'en/dashboard/flows' },
       { text: 'API Score', link: 'en/dashboard/api-score' },
