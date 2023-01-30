@@ -52,16 +52,16 @@ export const SIDEBAR: Sidebar = {
       { text: 'How Treblle works', link: 'en/how-treblle-works' },
       // { text: 'Service status', link: 'en/service-status' },
 		],
-    'Dashboard': [
-    	{ text: 'Overview', link: 'en/dashboard' },
+    'Product': [
+    	{ text: 'dashboard', link: 'en/dashboard' },
       { text: 'Projects', link: 'en/dashboard/projects' },
       { text: 'Endpoints', link: 'en/dashboard/endpoints' },
       { text: 'Requests', link: 'en/dashboard/requests' },
       { text: 'Problems', link: 'en/dashboard/problems' },
       { text: 'Flows', link: 'en/dashboard/flows' },
       { text: 'API Score', link: 'en/dashboard/api-score' },
-      { text: 'API documentation', link: 'en/dashboard/api-documentation' },
-      { text: 'Customize', link: 'en/dashboard/customize'}
+      { text: 'API Documentation', link: 'en/dashboard/api-documentation' },
+      { text: 'API Analytics', link: 'en/dashboard/api-analytics'}
 		],
     'Security': [
       { text: 'Masked fields', link: 'en/security/masked-fields' },
