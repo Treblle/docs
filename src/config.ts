@@ -52,6 +52,23 @@ export const SIDEBAR: Sidebar = {
       { text: 'How Treblle works', link: 'en/how-treblle-works' },
       // { text: 'Service status', link: 'en/service-status' },
 		],
+    'Integrations': [
+      { text: 'PHP', link: 'en/integrations/php' },
+      { text: 'Laravel', link: 'en/integrations/laravel' },
+      { text: '.Net', link: 'en/integrations/net' },
+      { text: '.Net Core', link: 'en/integrations/net-core'},
+      { text: 'Go', link: 'en/integrations/go'},
+      { text: 'Lumen', link: 'en/integrations/lumen'},
+      { text: 'Symfony', link: 'en/integrations/symfony'},
+      { text: 'Ruby', link: 'en/integrations/ruby'},
+      { text: 'Node', link: 'en/integrations/node'},
+      { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
+      { text: 'DirectUs', link: 'en/integrations/directus' },
+      { text: 'Django(Python)', link: 'en/integrations/django' },
+      { text: 'Spring(Java)', link: 'en/integrations/spring' },
+      { text: 'Fastify', link: 'en/integrations/fastify'},
+      { text: 'Community SDKs', link: 'en/integrations/community-sdks' }
+    ],
     'Product': [
     	{ text: 'dashboard', link: 'en/dashboard' },
       { text: 'Projects', link: 'en/dashboard/projects' },
@@ -69,23 +86,6 @@ export const SIDEBAR: Sidebar = {
       // { text: 'Certification', link: 'en/security/certification' },
       // { text: 'Data security', link: 'en/security/data-security' },
       // { text: 'Security audits', link: 'en/security/security-audits' },
-    ],
-		'Integrations': [
-      { text: 'PHP', link: 'en/integrations/php' },
-      { text: 'Laravel', link: 'en/integrations/laravel' },
-      { text: '.Net', link: 'en/integrations/net' },
-      { text: '.Net Core', link: 'en/integrations/net-core'},
-      { text: 'Go', link: 'en/integrations/go'},
-      { text: 'Lumen', link: 'en/integrations/lumen'},
-      { text: 'Symfony', link: 'en/integrations/symfony'},
-      { text: 'Ruby', link: 'en/integrations/ruby'},
-      { text: 'Node', link: 'en/integrations/node'},
-      { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
-      { text: 'DirectUs', link: 'en/integrations/directus' },
-      { text: 'Django(Python)', link: 'en/integrations/django' },
-      { text: 'Spring(Java)', link: 'en/integrations/spring' },
-      { text: 'Fastify', link: 'en/integrations/fastify'},
-      { text: 'Community SDKs', link: 'en/integrations/community-sdks' }
-    ],
+    ]
 	},
 };
