@@ -3,7 +3,8 @@ title: Requests
 description: Requests are calls to your API endpoints. In Treblle you can find requests made to your API in the Requests tab of your project's dashboard
 layout: ../../../layouts/MainLayout.astro
 ---
-> Watch this <a target="_blank" href="https://youtu.be/3Q2EmCE0iqo">screencast</a> for an overview of Requests.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3Q2EmCE0iqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Requests are calls to your API [endpoints](/en/dashboard/endpoints).
 
