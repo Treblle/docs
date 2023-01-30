@@ -61,7 +61,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'Lumen', link: 'en/integrations/lumen'},
       { text: 'Symfony', link: 'en/integrations/symfony'},
       { text: 'Ruby', link: 'en/integrations/ruby'},
-      { text: 'Node', link: 'en/integrations/node'},
+      { text: 'Node(JavaScript)', link: 'en/integrations/node'},
       { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
       { text: 'DirectUs', link: 'en/integrations/directus' },
       { text: 'Django(Python)', link: 'en/integrations/django' },
@@ -70,15 +70,15 @@ export const SIDEBAR: Sidebar = {
       { text: 'Community SDKs', link: 'en/integrations/community-sdks' }
     ],
     'Product': [
-    	{ text: 'dashboard', link: 'en/dashboard' },
+    	{ text: 'Dashboard', link: 'en/dashboard' },
       { text: 'Projects', link: 'en/dashboard/projects' },
       { text: 'Requests', link: 'en/dashboard/requests' },
       { text: 'Endpoints', link: 'en/dashboard/endpoints' },
       { text: 'Problems', link: 'en/dashboard/problems' },
       { text: 'Flows', link: 'en/dashboard/flows' },
       { text: 'API Score', link: 'en/dashboard/api-score' },
-      { text: 'API Documentation', link: 'en/dashboard/api-documentation' },
-      { text: 'API Analytics', link: 'en/dashboard/api-analytics'}
+      { text: 'API Analytics', link: 'en/dashboard/api-analytics'},
+      { text: 'API Documentation', link: 'en/dashboard/api-documentation' }
 		],
     'Security': [
       { text: 'Masked fields', link: 'en/security/masked-fields' },
