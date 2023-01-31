@@ -62,11 +62,12 @@ export const SIDEBAR: Sidebar = {
       { text: 'Symfony', link: 'en/integrations/symfony'},
       { text: 'Ruby', link: 'en/integrations/ruby'},
       { text: 'Node(JavaScript)', link: 'en/integrations/node'},
+      { text: 'Strapi', link: 'en/integrations/strapi'},
       { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
+      { text: 'Fastify', link: 'en/integrations/fastify'},
       { text: 'DirectUs', link: 'en/integrations/directus' },
       { text: 'Django(Python)', link: 'en/integrations/django' },
       { text: 'Spring(Java)', link: 'en/integrations/spring' },
-      { text: 'Fastify', link: 'en/integrations/fastify'},
       { text: 'Community SDKs', link: 'en/integrations/community-sdks' }
     ],
     'Product': [
