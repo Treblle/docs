@@ -5,6 +5,10 @@ layout: ../../../layouts/MainLayout.astro
 ---
 To integrate Treblle with [Strapi](http://strapi.io), we provide an official SDK for Strapi which is a Strapi plugin - [`treblle-strapi`](https://github.com/Treblle/treblle-strapi).
 
+## Requirements
+
+* Strapi v4
+
 ## Installation
 
 ```sh
