@@ -66,6 +66,7 @@ app.use(
 ```
 
 ## Strapi integration
+> This integration is for Strapi v3, for Strapi v4 check out [this](/en/integrations/strapi) integraion guide instead
 
 Treblle has support for Strapi as well, to start using it you need to define the middleware first and then enable the middleware.
 
