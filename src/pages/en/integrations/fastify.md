@@ -9,14 +9,14 @@ To integrate Treblle with [Fastify](https://fastify.io), we provide an official 
 ## Installation
 
 ```sh
-npm i treblle-fastify --save
+npm i @treblle/fastify --save
 ```
 
 ## Register treblle-fastify
 `treblle-fastify` is a Fastify plugin, so you need to register it.
 
 ```js
-const treblleFastify = require('treblle-fastify')
+const treblleFastify = require('@treblle/fastify')
 
 fastify.register(treblleFastify)
 ```
@@ -38,7 +38,7 @@ The `treblle-fastify` plugin can optionally take the following properties.
 For example you can setup the `treblle-fastify` plugin like so:
 
 ```js
-const treblleFastify = require('treblle-fastify')
+const treblleFastify = require('@treblle/fastify')
 
 fastiy.register(treblleFastify, {
   apiKey: process.env.TREBLLE_API_KEY,
