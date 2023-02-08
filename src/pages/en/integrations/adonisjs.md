@@ -8,13 +8,13 @@ To integrate Treblle with [AdonisJS](https://adonisjs.com), we provide an offici
 ## Installation
 
 ```sh
-npm i treblle-adonisjs --save
+npm i @treblle/adonisjs --save
 ```
 
 After installation run the configuration command in your AdonisJS project:
 
 ```sh
-node ace configure treblle-adonisjs
+node ace configure @treblle/adonisjs
 ```
 
 This will create the `treblle-adonisjs` config in `config/treblle.ts`.
@@ -43,7 +43,7 @@ TREBLLE_PROJECT_ID: Env.schema.string(),
 `treblle-adonisjs` exposes a middleware that you can add globally in your `start/kernel.ts` global middleware array like so:
 
 ```ts
-Server.middleware.register([() => import('treblle-adonisjs')])
+Server.middleware.register([() => import('@treblle/adonisjs')])
 ```
 
 And that's it, Treblle will now monitor your API.
@@ -57,7 +57,7 @@ For example we can do:
 ```ts
 // start/kernel.ts
 Server.middleware.registerNamed({
-  treblle: () => import('treblle-adonisjs')
+  treblle: () => import('@treblle/adonisjs')
 })
 ```
 
