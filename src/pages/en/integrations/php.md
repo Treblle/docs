@@ -6,11 +6,11 @@ layout: ../../../layouts/MainLayout.astro
 
 ## Requirements
 
-* PHP 7.4+
+- PHP 7.4+
 
 ## Dependencies
 
-* [`guzzlehttp/guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
+- [`guzzlehttp/guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
 
 ## Installation
 

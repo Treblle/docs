@@ -6,7 +6,7 @@ layout: ../../../layouts/MainLayout.astro
 
 ## Requirements
 
-* .NET Core 3.0
+- .NET Core 3.0
 
 ## Installation
 
@@ -16,7 +16,7 @@ You can install Treblle .NET Core via NuGet Package Manager or by running the fo
 dotnet add package Treblle.Net.Core
 ```
 
-You will be prompted to enter your Treblle API key and Project ID. Your settings will be saved in ```app.config``` and you can always edit them there.
+You will be prompted to enter your Treblle API key and Project ID. Your settings will be saved in `app.config` and you can always edit them there.
 
 Here is an example:
 
@@ -31,8 +31,7 @@ Here is an example:
 
 ```
 
-Next you'll need to add this to your ``` Configure(IApplicationBuilder app, IWebHostEnvironment env) ``` method in ```Startup.cs```:
-
+Next you'll need to add this to your `Configure(IApplicationBuilder app, IWebHostEnvironment env)` method in `Startup.cs`:
 
 ```csharp
 app.Use(next => new  RequestDelegate(
@@ -52,14 +51,11 @@ Now you can specify which endpoints you want Treblle to track by adding this sim
 
 ```
 
-
 That's it. Your API requests and responses are now being sent to your Treblle project. Just by adding a few lines of code you get features like: auto-documentation, real-time request/response monitoring, error tracking and so much more.
-
 
 ### Need to hide additional fields?
 
-If you want to expand the list of fields you want to hide, you can pass property names you want to hide by adding the ```AdditionalFieldsToMask``` property to your ```app.config``` file like in the example below.
-
+If you want to expand the list of fields you want to hide, you can pass property names you want to hide by adding the `AdditionalFieldsToMask` property to your `app.config` file like in the example below.
 
 ```xml
 <configuration>
@@ -73,8 +69,7 @@ If you want to expand the list of fields you want to hide, you can pass property
 
 ## Error handling
 
-If there are any errors, they will be logged in ```TreblleLog.txt```.
-
+If there are any errors, they will be logged in `TreblleLog.txt`.
 
 ## Support
 

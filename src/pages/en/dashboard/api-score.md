@@ -10,10 +10,9 @@ Treblle measures the quality of APIs to make sure that the API follows a standar
 
 Treblle measures API Scores across 3 categories
 
-* [Performance](#performance)
-* [Security](#security)
-* [Quality](#quality)
-
+- [Performance](#performance)
+- [Security](#security)
+- [Quality](#quality)
 
 > To access the API score for a project, click on the **API Score** tab of that project.
 

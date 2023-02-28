@@ -5,19 +5,20 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 ## Features
-* All Treblle features
-* Supports Laravel Vapor and Laravel Octane
+
+- All Treblle features
+- Supports Laravel Vapor and Laravel Octane
 
 ## Requirements
 
-* PHP 7.2+
-* Laravel 7+
+- PHP 7.2+
+- Laravel 7+
 
 ## Dependencies
 
-* [`laravel/framework`](https://packagist.org/packages/laravel/framework)
-* [`guzzlehttp/guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
-* [`nesbot/carbon`](https://packagist.org/packages/nesbot/carbon)
+- [`laravel/framework`](https://packagist.org/packages/laravel/framework)
+- [`guzzlehttp/guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
+- [`nesbot/carbon`](https://packagist.org/packages/nesbot/carbon)
 
 ## Installation
 

@@ -14,30 +14,33 @@ When Treblle notice something that is not normal for like you were having an ave
 
 You can see at a glance the following information about a problem:
 
-* The HTTP method of the problem (if applicable)
-* The problem [severity](/en/dashboard/problems#problem-severity) level
-* The number of occurrences of that problem in your project
-* The status of the problem - closed or open
+- The HTTP method of the problem (if applicable)
+- The problem [severity](/en/dashboard/problems#problem-severity) level
+- The number of occurrences of that problem in your project
+- The status of the problem - closed or open
 
 ## Problem severity
+
 A problem in Treblle can have one of the following severity:
-* Low
-* Medium
-* High
+
+- Low
+- Medium
+- High
 
 ## Close a problem
-If you want to close a problem in the **Problems** tab, click on the dropdown menu in the top-right corner of the problem and click on **Mark as closed**.  A confirmation modal will appear for you to click on **Confirm** if you want to proceed.
 
+If you want to close a problem in the **Problems** tab, click on the dropdown menu in the top-right corner of the problem and click on **Mark as closed**. A confirmation modal will appear for you to click on **Confirm** if you want to proceed.
 
 ## Filters
+
 You can filter the endpoints in the **Problems** tab of a project by clicking on the **Filter** button to access the filters drawer for endpoints.
 
 In the filters drawer, you filter endpoints by:
 
-* Is resolved: either, yes or no
-* HTTP method
-* Group
-* [Endpoint](/en/dashboard/endpoints)
-* Severity
+- Is resolved: either, yes or no
+- HTTP method
+- Group
+- [Endpoint](/en/dashboard/endpoints)
+- Severity
 
 Click on the **Filter** button to apply the filters you selected.

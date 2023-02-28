@@ -1,0 +1,54 @@
+---
+title: Treblle for Express
+description: Integrating Treblle in Express
+layout: ../../../layouts/MainLayout.astro
+---
+
+To integrate Treblle with [Express](https://expressjs.com), we provide an official SDK for Express - [`treblle-express`](https://github.com/Treblle/treblle-express).
+
+## Installation
+
+```sh
+npm i @treblle/express --save
+```
+
+## Setting up credentials
+
+`@treblle/express` expects your Treblle API key and project ID to be set as environment varible in a `.env` file or in your production environment.
+
+Below are the environment variable that will be checked by `@treblle/express`
+
+- `TREBLLE_API_KEY`
+- `TREBLLE_PROJECT_ID`
+
+## Setup middleware
+
+`@treblle/express` expose a `treblle` function which returns a middlware, you can pass this function to `app.use()` to register it a middleware.
+
+```js
+const treblle = require('@treblle/express')
+const app = express()
+
+app.use(treblle())
+```
+
+Treblle will now now start monitoring requests on your Express server.
+
+## Config options
+
+You can optionally pass a config option to the `treblle` function.
+
+```js
+const treblle = require('@treblle/express')
+const app = express()
+
+app.use(
+  treblle({
+    apiKey: process.env.TREBLLE_API_KEY,
+    projectId: process.env.TREBLLE_PROJECT_ID,
+    additionalFieldsToMask: [],
+  })
+)
+```
+
+> The additionalFieldsToMask config option takes in an array of strings that matches properties in your response payload or header that you want to [mask](/en/security/masked-fields)

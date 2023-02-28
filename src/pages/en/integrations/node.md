@@ -24,8 +24,8 @@ $ npm install treblle
 Don't forget to load the required JS modules in your app.js like so:
 
 ```js
-const express = require("express");
-const { useTreblle } = require("treblle");
+const express = require('express')
+const { useTreblle } = require('treblle')
 ```
 
 ## Getting started
@@ -33,13 +33,13 @@ const { useTreblle } = require("treblle");
 Next, create a FREE account on <https://treblle.com> to get an API key and Project ID. After you have those simply initialize Treblle in your **app.js** file like so for Express:
 
 ```js
-const app = express();
-app.use(express.json());
+const app = express()
+app.use(express.json())
 
 useTreblle(app, {
-  apiKey: "_YOUR_API_KEY_",
-  projectId: "_YOUR_PROJECT_ID_",
-});
+  apiKey: '_YOUR_API_KEY_',
+  projectId: '_YOUR_PROJECT_ID_',
+})
 ```
 
 That's it. Your API requests and responses are now being sent to your Treblle project. Just by adding that line of code you get features like: auto-documentation, real-time request/response monitoring, error tracking and so much more.
@@ -49,23 +49,24 @@ That's it. Your API requests and responses are now being sent to your Treblle pr
 If you're using koa, then you can enable Treblle like this:
 
 ```js
-const Koa = require("koa");
-const KoaRouter = require("koa-router");
-const KoaBody = require("koa-body");
-const { koaTreblle } = require("treblle");
+const Koa = require('koa')
+const KoaRouter = require('koa-router')
+const KoaBody = require('koa-body')
+const { koaTreblle } = require('treblle')
 
-const app = new Koa();
-const router = new KoaRouter();
+const app = new Koa()
+const router = new KoaRouter()
 
 app.use(
   koaTreblle({
-    apiKey: "_YOUR_API_KEY_",
-    projectId: "_YOUR_PROJECT_ID_",
+    apiKey: '_YOUR_API_KEY_',
+    projectId: '_YOUR_PROJECT_ID_',
   })
-);
+)
 ```
 
 ## Strapi integration
+
 > This integration is for Strapi v3, for Strapi v4 check out [this](/en/integrations/strapi) integraion guide instead
 
 Treblle has support for Strapi as well, to start using it you need to define the middleware first and then enable the middleware.
@@ -79,20 +80,20 @@ npx create-strapi-app my-project --quickstart
 First define the middleware in `middlewares/treblle/index.js` like this:
 
 ```js
-const { strapiTreblle } = require("treblle");
+const { strapiTreblle } = require('treblle')
 
 module.exports = (strapi) => {
   return {
     initialize() {
       strapi.app.use(
         strapiTreblle({
-          apiKey: "_YOUR_API_KEY_",
-          projectId: "_YOUR_PROJECT_ID_",
+          apiKey: '_YOUR_API_KEY_',
+          projectId: '_YOUR_PROJECT_ID_',
         })
-      );
+      )
     },
-  };
-};
+  }
+}
 ```
 
 Then enable the Treblle middleware in `config/middleware.js` like this:
@@ -104,7 +105,7 @@ module.exports = {
       enabled: true,
     },
   },
-};
+}
 ```
 
 ## Cloudflare Workers integration
@@ -130,39 +131,39 @@ format = "service-worker"
 // webpack.config.js
 
 module.exports = {
-  entry: "./index.js",
-  target: "webworker",
-  mode: "production",
+  entry: './index.js',
+  target: 'webworker',
+  mode: 'production',
   output: {
-    filename: "worker.js",
+    filename: 'worker.js',
   },
-};
+}
 ```
 
 ```js
 // worker.js
 
-const { serviceWorkerTreblle } = require("treblle");
+const { serviceWorkerTreblle } = require('treblle')
 
 // Call this function for initialization, Treblle will attach itself to the 'fetch' event to be able to listen for response
 const treblle = serviceWorkerTreblle({
-  apiKey: "_YOUR_API_KEY_",
-  projectId: "_YOUR_PROJECT_ID_",
+  apiKey: '_YOUR_API_KEY_',
+  projectId: '_YOUR_PROJECT_ID_',
   additionalFieldsToMask: ['key1', 'key2'], // Optional
   showErrors: true, // Optional, defaults to true
-});
+})
 
 // Wrap your 'fetch' handler inside returned Treblle function, so Treblle can listen for unhandled application errors in your code
 addEventListener(
-  "fetch",
+  'fetch',
   treblle((event) => {
     event.respondWith(
-      new Response("Hello worker!", {
-        headers: { "content-type": "text/plain" },
+      new Response('Hello worker!', {
+        headers: { 'content-type': 'text/plain' },
       })
-    );
+    )
   })
-);
+)
 ```
 
 ### Module workers
@@ -176,24 +177,24 @@ Example
 ```js
 // worker.js
 
-import { moduleWorkerTreblle } from "treblle";
+import { moduleWorkerTreblle } from 'treblle'
 
 // Initialize Treblle with this function, and store Treblle wrapper inside a variable
 const treblle = moduleWorkerTreblle({
-  apiKey: "_YOUR_API_KEY_",
-  projectId: "_YOUR_PROJECT_ID_",
+  apiKey: '_YOUR_API_KEY_',
+  projectId: '_YOUR_PROJECT_ID_',
   additionalFieldsToMask: ['key1', 'key2'], // Optional
   showErrors: true, // Optional, defaults to true
-});
+})
 
 export default {
   // Wrap your 'fetch' handlers inside Treblle wrapper function to use it
   fetch: treblle(async (request) => {
-    return new Response(JSON.stringify({ sample: "json" }), {
-      headers: { "content-type": "application/json" },
-    });
+    return new Response(JSON.stringify({ sample: 'json' }), {
+      headers: { 'content-type': 'application/json' },
+    })
   }),
-};
+}
 ```
 
 **Important Note**
@@ -215,7 +216,6 @@ Treblle package (currently) uses some Node native libraries for other integratio
 
 ## NestJS (with Express)
 
-
 ```js
 // NestJS's boostrap function
 const { useNestTreblle } = require("treblle");
@@ -233,20 +233,19 @@ useNestTreblle(expressInstance, {
 ...
 ```
 
-
 ## Running Treblle only in production
 
 If you want to run Treblle only in production, you can rely on the environment variables, or use a similar approach via your app config.
 
 ```js
-const app = express();
-app.use(express.json());
+const app = express()
+app.use(express.json())
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   useTreblle(app, {
-    apiKey: "_YOUR_API_KEY_",
-    projectId: "_YOUR_PROJECT_ID_",
-  });
+    apiKey: '_YOUR_API_KEY_',
+    projectId: '_YOUR_PROJECT_ID_',
+  })
 }
 ```
 
@@ -256,10 +255,10 @@ If you want to expand the list of fields you want to hide, you can pass property
 
 ```js
 useTreblle(app, {
-  apiKey: "_YOUR_API_KEY_",
-  projectId: "_YOUR_PROJECT_ID_",
-  additionalFieldsToMask: ["secretField", "highlySensitiveField"],
-});
+  apiKey: '_YOUR_API_KEY_',
+  projectId: '_YOUR_PROJECT_ID_',
+  additionalFieldsToMask: ['secretField', 'highlySensitiveField'],
+})
 ```
 
 ## Logging errors
@@ -268,10 +267,10 @@ For easier debugging when sending the data to Treblle errors are visible by defa
 
 ```js
 useTreblle(app, {
-  apiKey: "_YOUR_API_KEY_",
-  projectId: "_YOUR_PROJECT_ID_",
+  apiKey: '_YOUR_API_KEY_',
+  projectId: '_YOUR_PROJECT_ID_',
   showErrors: false,
-});
+})
 ```
 
 ## Support

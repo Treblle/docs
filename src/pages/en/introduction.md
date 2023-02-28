@@ -9,16 +9,17 @@ layout: ../../layouts/MainLayout.astro
 Treblle makes it super easy to understand what’s going on with your APIs and the apps that use them.
 
 ## Features
+
 By integrating Treblle to your API, you get the following features out of the box:
 
-* Real-time API monitoring and logging
-* Auto-generated [API documentation](/en/dashboard/api-documentation) with <a href="https://swagger.io/specification/" target="_blank">Open API Specification</a> support
-* API analytics
-* [API quality scoring](/en/dashboard/api-score)
-* One-click testing
-* API management on the go
-* Share request
-* Error reporting
+- Real-time API monitoring and logging
+- Auto-generated [API documentation](/en/dashboard/api-documentation) with <a href="https://swagger.io/specification/" target="_blank">Open API Specification</a> support
+- API analytics
+- [API quality scoring](/en/dashboard/api-score)
+- One-click testing
+- API management on the go
+- Share request
+- Error reporting
 
 ## Getting Started
 

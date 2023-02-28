@@ -6,14 +6,14 @@ layout: ../../../layouts/MainLayout.astro
 
 ## Requirements
 
-* PHP 7.2+
-* Lumen 7+
+- PHP 7.2+
+- Lumen 7+
 
 ## Dependencies
 
-* [`laravel/lumen`](https://packagist.org/packages/laravel/lumen)
-* [`guzzlehttp/guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
-* [`nesbot/carbon`](https://packagist.org/packages/nesbot/carbon)
+- [`laravel/lumen`](https://packagist.org/packages/laravel/lumen)
+- [`guzzlehttp/guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
+- [`nesbot/carbon`](https://packagist.org/packages/nesbot/carbon)
 
 ## Installation
 
@@ -24,29 +24,36 @@ composer require treblle/treblle-lumen
 ```
 
 ## Getting started
+
 Installing Lumen packages is a lot more complicated than Laravel packages and requires a few manual steps. If you want a completely automated process please use Laravel.
 
 ### Step 1: Publish config files
+
 The first thing we need to do is publish the Treblle config file and make sure Lumen loads it. To do that we need to copy/paste the package config file like so:
 
 ```bash
 mkdir -p config
 cp vendor/treblle/treblle-lumen/config/treblle.php config/treblle.php
 ```
-Now we can have Lumen load the config file. We do that by adding a new line in `bootstrap/app.php`, under the *Register Config Files* section, like so:
+
+Now we can have Lumen load the config file. We do that by adding a new line in `bootstrap/app.php`, under the _Register Config Files_ section, like so:
 
 ```php
 $app->configure('treblle');
 ```
 
 ### Step 2: Register middleware
+
 We need to register the Treblle middleware in Lumen. To do add a new line of code to `bootstrap/app.php`, under the Register Middleware section, like so:
+
 ```php
 $app->routeMiddleware([
     'treblle' => Treblle\Middlewares\TreblleMiddleware::class
 ]);
 ```
+
 ### Step 3: Configure Treblle
+
 You need an API KEY and PROJECT ID for Treblle to work. You can get those by creating a FREE account on <https://treblle.com> and your first project. You'll get the two keys which you need to add to your .ENV file like so:
 
 ```bash
@@ -64,6 +71,7 @@ $router->group(['prefix' => 'api', 'middleware' => 'treblle'], function () use (
     $router->post('users',  ['uses' => 'TestController@store']);
 });
 ```
+
 **You're all set**. Next time someone makes a request to your API you will see it in real-time on your Treblle dashboard
 alongside other features like: auto-generated documentation, error tracking, analytics and API quality scoring.
 
@@ -85,7 +93,7 @@ Treblle **masks sensitive information** from both the request and response data 
 **before it even leaves your server**. The following parameters are automatically masked: password, pwd, secret,
 password_confirmation, cc, card_number, ccv, ssn, credit_score.
 
-You can customize this list by editing the array  configuration file.
+You can customize this list by editing the array configuration file.
 
 ## Support
 

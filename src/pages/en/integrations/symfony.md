@@ -5,8 +5,9 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 ## Requirements
-* PHP 7.4+
-* Symfony 4.4+
+
+- PHP 7.4+
+- Symfony 4.4+
 
 ## Installation
 
@@ -34,7 +35,7 @@ Enable it by adding it to the list of registered bundles depending on the Symfon
 ## Configuration of the SDK
 
 Configure the SDK by adding the following snippet to your project configuration. If you have Symfony 3.4 add it
-to ``app/config/config_prod.yml``. For Symfony 4 or newer add the value to `config/packages/treblle.yaml`.
+to `app/config/config_prod.yml`. For Symfony 4 or newer add the value to `config/packages/treblle.yaml`.
 
 ```yaml
 treblle:
@@ -68,12 +69,14 @@ services:
     class: GuzzleHttp\Client
 
   Treblle\Treblle:
-    factory: [ Treblle\Symfony\DependencyInjection\TreblleFactory, 'createTreblle' ]
+    factory:
+      [Treblle\Symfony\DependencyInjection\TreblleFactory, 'createTreblle']
     arguments:
       $client: '@treblle-client'
 
   Treblle\PayloadAnonymizer:
-    factory: [ Treblle\Symfony\DependencyInjection\TreblleFactory, 'createAnonymizer' ]
+    factory:
+      [Treblle\Symfony\DependencyInjection\TreblleFactory, 'createAnonymizer']
 
   Treblle\Symfony\DataProvider: ~
   Treblle\Symfony\EventSubscriber\TreblleEventSubscriber: ~
@@ -96,13 +99,15 @@ Example: We want to override how Request data is collected and passed to Treblle
 
 1. We implement our own service satisfying the `Treblle\Contract\RequestDataProvider` interface in `App\Utils\AcmeRequestDataProvider`
 2. We register the service in our own `services.yaml`:
+
 ```yaml
-  App\Utils\AcmeRequestDataProvider: ~
+App\Utils\AcmeRequestDataProvider: ~
 ```
 
 3. We define servic ealias: `Treblle\Contract\RequestDataProvider: '@AcmeRequestDataProvider'`
+
 ```yaml
-  Treblle\Contract\RequestDataProvider: '@App\Utils\AcmeRequestDataProvider'
+Treblle\Contract\RequestDataProvider: '@App\Utils\AcmeRequestDataProvider'
 ```
 
 Now all instances depending on the `RequestDataProvider` interface will use your service.

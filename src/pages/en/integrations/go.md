@@ -16,7 +16,6 @@ go get github.com/treblle/treblle-go
 
 Trebble uses [Go Modules](https://github.com/golang/go/wiki/Modules) to manage dependencies.
 
-
 ## Basic configuration
 
 Configure Treblle at the start of your `main()` function:
@@ -37,9 +36,9 @@ func main() {
 
 ```
 
-
 After that, just use the middleware with any of your handlers:
- ```go
+
+```go
 mux := http.NewServeMux()
 mux.Handle("/", treblle.Middleware(yourHandler))
 ```
