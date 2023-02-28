@@ -62,6 +62,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'Symfony', link: 'en/integrations/symfony'},
       { text: 'Ruby', link: 'en/integrations/ruby'},
       { text: 'Node(JavaScript)', link: 'en/integrations/node'},
+      { text: 'Sails', link: 'en/integrations/sails'},
       { text: 'Strapi', link: 'en/integrations/strapi'},
       { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
       { text: 'Fastify', link: 'en/integrations/fastify'},
