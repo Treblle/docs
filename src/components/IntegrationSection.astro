@@ -1,0 +1,27 @@
+---
+interface Props {
+  integration: Integration
+}
+import type { Integration } from '../data/integrations'
+import PlatformCard from '../components/PlatformCard.astro'
+const { integration } = Astro.props
+---
+
+<h3>{integration.language}</h3>
+
+<ul>
+  {
+    integration.platforms.map((platform) => (
+      <PlatformCard platform={platform} />
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+</style>

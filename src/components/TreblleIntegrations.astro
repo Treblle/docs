@@ -1,0 +1,10 @@
+---
+import integrations from '../data/integrations'
+import IntegrationSection from '../components/IntegrationSection.astro'
+---
+
+{
+  integrations.map((integration) => (
+    <IntegrationSection integration={integration} />
+  ))
+}

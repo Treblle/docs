@@ -13,6 +13,7 @@ npm i @treblle/sails --save
 ```
 
 ## Setting up credentials
+
 Treblle needs you to specify your project Id and API key. `@treblle/sails` makes this easy to do by expecting you to set it up in `config/local.js` as:
 
 ```js
@@ -25,10 +26,11 @@ treblle: {
 
 `@treblle/sails` will also check your environment for the following environment variables:
 
-* `TREBLLE_API_KEY`
-* `TREBLLE_PROJECT_ID`
+- `TREBLLE_API_KEY`
+- `TREBLLE_PROJECT_ID`
 
 ## Config options
+
 `@treblle/sails` also checks `config/treblle.js` for config options like `apiKey`, `projectId`, etc. So you can create a `config/treblle.js` file in your project to look like this:
 
 ```js
@@ -37,22 +39,23 @@ module.exports.treblle = {
   apiKey: '<YOUR_TREBLLE_API_KEY>',
   projectId: '<YOUR_TREBLLE_PROJECT_ID>',
   additionalFieldsToMask: ['key1', 'key2'], // optional
-  routesToMonitor: [] // optional
+  routesToMonitor: [], // optional
 }
 ```
 
 ### routesToMonitor
+
 One config worthy of note is the `routesToMonitor` array. By default, the `routesToMonitor` array has the following routes:
 
 ```js
 {
   routesToMonitor: [
-  'GET r|^((?![^?]*\\/[^?\\/]+\\.[^?\\/]+(\\?.*)?).)*$|',
-  // (^^Leave out assets)
-  'POST /*',
-  'PATCH /*',
-  'PUT /*',
-  'DELETE /*',
+    'GET r|^((?![^?]*\\/[^?\\/]+\\.[^?\\/]+(\\?.*)?).)*$|',
+    // (^^Leave out assets)
+    'POST /*',
+    'PATCH /*',
+    'PUT /*',
+    'DELETE /*',
   ]
 }
 ```
@@ -66,6 +69,6 @@ For example if you want to monitor only `/api/*` routes, you can pass the config
 ```js
 // config/treblle.js
 module.exports.treblle = {
-  routesToMonitor: ['/api/*'] // monitor routes that starts with /api
+  routesToMonitor: ['/api/*'], // monitor routes that starts with /api
 }
 ```

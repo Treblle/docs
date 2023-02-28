@@ -16,7 +16,6 @@ npm install @treblle/directus-extension-treblle
 
 Use environment variables for providing Treblle credentials and configuration. Directus already supports `.env` file, so it enough to just append your variables there.
 
-
 ## Treblle Configuration
 
 ```

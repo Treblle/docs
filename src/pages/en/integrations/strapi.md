@@ -3,11 +3,12 @@ title: Treblle for Strapi
 description: Integrating Treblle in Strapi
 layout: ../../../layouts/MainLayout.astro
 ---
+
 To integrate Treblle with [Strapi](http://strapi.io), we provide an official SDK for Strapi which is a Strapi plugin - [`treblle-strapi`](https://github.com/Treblle/treblle-strapi).
 
 ## Requirements
 
-* Strapi v4
+- Strapi v4
 
 ## Installation
 
@@ -15,13 +16,12 @@ To integrate Treblle with [Strapi](http://strapi.io), we provide an official SDK
 npm i @treblle/strapi --save
 ```
 
-After installation set the following environment variables  your `.env`
+After installation set the following environment variables your `.env`
 
 > You can find the values in your Treblle dashboard
 
-* `TREBLLE_API_KEY`
-* `TREBLLE_PROJECT_ID`
-
+- `TREBLLE_API_KEY`
+- `TREBLLE_PROJECT_ID`
 
 ## Setup
 
@@ -30,7 +30,7 @@ After installation set the following environment variables  your `.env`
 ```js
 module.exports = [
   //...
- 'plugin::treblle.treblle'
+  'plugin::treblle.treblle',
 ]
 ```
 
@@ -39,28 +39,31 @@ And that's it, Treblle will now monitor your Strapi content API.
 ## Config
 
 ### AdditionalFieldsToMask
+
 You can specify additional fields to be [masked](/en/security/masked-fields) before sending the Treblle payload. To do so, add the following config in `config/plugins.js`
 
 ```js
 module.exports = {
-  'treblle': {
+  treblle: {
     config: {
-      additionalFieldsToMask: ['FIELD_TO_MASK_1']
-    }
-  }
+      additionalFieldsToMask: ['FIELD_TO_MASK_1'],
+    },
+  },
 }
 ```
+
 > Do replace `FIELDS_TO_MASK_1` with the field you want to mask.
 
 ### routesToMonitor
+
 By default, this Strapi plugin will monitor only routes that starts has `/api` in the URL. You can override this by passing a `routesToMonitor` array in the `config` of the plugin.
 
 ```js
 module.exports = {
-  'treblle': {
+  treblle: {
     config: {
-      routesToMonitor: ['api'] // this is the default
-    }
-  }
+      routesToMonitor: ['api'], // this is the default
+    },
+  },
 }
 ```

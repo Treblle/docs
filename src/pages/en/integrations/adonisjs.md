@@ -3,6 +3,7 @@ title: Treblle for AdonisJS
 description: Integrating Treblle in AdonisJS
 layout: ../../../layouts/MainLayout.astro
 ---
+
 To integrate Treblle with [AdonisJS](https://adonisjs.com), we provide an official SDK for Adonis - [`treblle-adonisjs`](https://github.com/Treblle/treblle-adonisjs).
 
 ## Installation
@@ -21,8 +22,8 @@ This will create the `treblle-adonisjs` config in `config/treblle.ts`.
 
 `treblle-adonisjs` relies on the following environment variables:
 
-* `TREBLLE_API_KEY`
-* `TREBLLE_PROJECT_ID`
+- `TREBLLE_API_KEY`
+- `TREBLLE_PROJECT_ID`
 
 So make sure you touch your `.env` file to have those environment variables(You can find the values in your Treblle dashboard)
 
@@ -57,7 +58,7 @@ For example we can do:
 ```ts
 // start/kernel.ts
 Server.middleware.registerNamed({
-  treblle: () => import('@treblle/adonisjs')
+  treblle: () => import('@treblle/adonisjs'),
 })
 ```
 
@@ -66,18 +67,28 @@ Then in `routes.ts` you can have:
 ```ts
 Route.group(() => {
   Route.post('/posts', async ({ request }) => {
-    return { success: true, message: 'Post created successfully', data: request.body() }
+    return {
+      success: true,
+      message: 'Post created successfully',
+      data: request.body(),
+    }
   })
   Route.post('/users/login', async ({ request }) => {
     return { success: true, message: 'Log in successful', data: request.body() }
   })
   Route.post('/licenses', async ({ request }) => {
-    return { success: true, message: 'License created successfully', data: request.body() }
+    return {
+      success: true,
+      message: 'License created successfully',
+      data: request.body(),
+    }
   })
   Route.post('/error', async ({ response }) => {
-    return response.status(500).send({ success: false, message: 'Something went wrong' })
+    return response
+      .status(500)
+      .send({ success: false, message: 'Something went wrong' })
   })
 })
-.prefix('/api/v1')
-.middleware('treblle')
+  .prefix('/api/v1')
+  .middleware('treblle')
 ```

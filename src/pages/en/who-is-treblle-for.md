@@ -12,27 +12,27 @@ They are used to build web applicatiions and mobile apps as well as integrated w
 
 So when you build or consume APIs, you spend a lot of time on every stage of the API lifecycle on doing things like:
 
-* Administration
-* Writing documentations
-* Providing support
-* Debugging
-* Monitoring or measuring
+- Administration
+- Writing documentations
+- Providing support
+- Debugging
+- Monitoring or measuring
 
 > Treblle allows both API providers and consumers to focus on their business implementation and leave the API management and observability to Treblle.
 
 If your role is one of the following listed below, Treblle is a great tool to have in your arsenal as it consolidates everything you will need for API **management**, **monitoring**, and **observability** in a single accessible [Dashboard](/en/dashboard).
 
-* Front-end developers
-* Back-end developers
-* Mobile developers
-* Software engineers
-* QA engineers
-* Engineering managers and leaders
-* DevOps managers
-* Product managers
-* API product managers
-* CTOs & CIOs
-* Technical leads
-* DevOps engineers
-* Mobile developers
-* Web developers
+- Front-end developers
+- Back-end developers
+- Mobile developers
+- Software engineers
+- QA engineers
+- Engineering managers and leaders
+- DevOps managers
+- Product managers
+- API product managers
+- CTOs & CIOs
+- Technical leads
+- DevOps engineers
+- Mobile developers
+- Web developers

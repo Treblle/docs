@@ -3,6 +3,7 @@ title: Treblle for Django(Python)
 description: Integrating Treblle in Django/Python
 layout: ../../../layouts/MainLayout.astro
 ---
+
 ## Requirements
 
 - requests
@@ -41,11 +42,10 @@ TREBLLE_INFO = {
 'project_id': os.environ.get('TREBLLE_PROJECT_ID')
 }
 ```
+
 That's it. Your API requests and responses are now being sent to your Treblle project. Just by adding these lines of code you get features like: auto-documentation, real-time request/response monitoring, error tracking and so much more.
 
-
 ## Need to hide additional fields?
-
 
 If you want to expand the list of fields you want to hide, you can pass property names you want to hide by using the `TREBLLE_HIDDEN_KEYS` setting like in the example below.
 

@@ -5,8 +5,9 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 ## Requirements
-* Ruby 2.0+
-* Ruby on Rails 4.0+
+
+- Ruby 2.0+
+- Ruby on Rails 4.0+
 
 ## Installation
 
@@ -25,11 +26,11 @@ config.middleware.use(Treblle)
 
 Finally, make sure to set environemnt variables as described below:
 
-| Variable                | Description                                                                      |
-| :----------------       | :--------------------------------------------------------------------------------|
-| TREBLLE_API_KEY         | (required) Valid API key obtained during registration on treblle.com             |
-| TREBLLE_PROJECT_ID      | (required) Valid Project ID obtained after creating a new project on treblle.com |
-| TREBLLE_SENSITIVE_FIELDS| (optional) Additional optional keys that will be masked before sending to Treblle|
+| Variable                 | Description                                                                       |
+| :----------------------- | :-------------------------------------------------------------------------------- |
+| TREBLLE_API_KEY          | (required) Valid API key obtained during registration on treblle.com              |
+| TREBLLE_PROJECT_ID       | (required) Valid Project ID obtained after creating a new project on treblle.com  |
+| TREBLLE_SENSITIVE_FIELDS | (optional) Additional optional keys that will be masked before sending to Treblle |
 
 `TREBLLE_SENSITIVE_FIELDS` should be comma separated values like: `cc_number,cvv,dont_show_this_field`.
 

@@ -48,7 +48,7 @@ That's it. Your API requests and responses are now being sent to your Treblle pr
 
 ## Running Treblle only for certain URL patterns
 
-By default, Trebble applies its filter on the default URL pattern (/*). If you want to run Treblle only for certain URL patterns, you can define a list of patterns by using the `treblle.urlPatterns` configuration property like in the example below.
+By default, Trebble applies its filter on the default URL pattern (/\*). If you want to run Treblle only for certain URL patterns, you can define a list of patterns by using the `treblle.urlPatterns` configuration property like in the example below.
 
 ```csv
 treblle.urlPatterns=/greeting,/goodbye
@@ -65,7 +65,6 @@ treblle.maskingKeywords=secretField,highlySensitiveField
 ## Logging error bodies
 
 The Spring default behavior is to handle errors via the `/error` endpoint. To allow Treblle to properly process your error response bodies you should switch to controller based exception handling, for example by using `@ControllerAdvice` and `@ExceptionHandler` ( https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc )
-
 
 ## Support
 
