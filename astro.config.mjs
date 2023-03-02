@@ -14,5 +14,5 @@ export default defineConfig({
     react(),
     mdx(),
   ],
-  site: `http://astro.build`,
+  site: `http://docs.treblle.com`,
 })

@@ -5,52 +5,57 @@ interface Props {
 import type { Platform } from '../data/integrations'
 
 const { platform } = Astro.props
-
-function getLogoSize(platformName: string) {
-  const logoName = platformName.toLowerCase()
-  switch (logoName) {
-    case 'lumen':
-      return '30'
-    case 'koa':
-    case 'rails':
-      return '100'
-    case 'node':
-      return '50'
-    case 'fastify':
-    case '.net core':
-    case 'django':
-      return '70'
-    default:
-      return '60'
-  }
-}
 ---
 
-<div>
-  <img
-    src={platform.logo}
-    width={getLogoSize(platform.name)}
-    loading="lazy"
-    alt={platform.name}
-  />
-
-  <p><a href={platform.link}>{platform.name}</a></p>
-</div>
+<li class="platform-card">
+  <a href={platform.link}>
+    <img
+      src={platform.logo}
+      class="logo-light"
+      loading="lazy"
+      alt={platform.name}
+    />
+    <img
+      src={platform.logoDark}
+      class="logo-dark"
+      loading="lazy"
+      alt={platform.name}
+    />
+  </a>
+</li>
 
 <style>
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  li {
+    /* outline: 1px solid red; */
+  }
+  img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3);
+    transition: all 500ms;
+  }
+  .logo-light {
+    display: var(--logo-light-display);
+    background-color: var(--color-base-white);
   }
 
+  .platform-card {
+    height: 6rem;
+    width: 6rem;
+    align-self: flex-end;
+    justify-self: baseline;
+  }
+
+  .logo-dark {
+    display: var(--logo-dark-display);
+  }
   a {
-    color: var(--color-base-black);
     text-decoration: none;
     transition: all 500ms;
   }
   a:hover {
     text-decoration: underline;
+  }
+  img:hover {
+    transform: scale(1.1);
   }
 </style>
