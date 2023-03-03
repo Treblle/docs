@@ -103,7 +103,7 @@ const integrations: Integration[] = [
     platforms: [
       {
         name: '.Net',
-        link: '/en/integrations/dotnet',
+        link: '/en/integrations/net',
         logo: '/integrations/dotnet.svg',
         logoDark: '/integrations/dotnet-dark.svg',
       },
@@ -115,7 +115,7 @@ const integrations: Integration[] = [
       },
       {
         name: '.Net Core',
-        link: '/en/integrations/dotnet-core',
+        link: '/en/integrations/net-core',
         logo: '/integrations/dotnet-core.svg',
         logoDark: '/integrations/dotnet-core-dark.svg',
       },
