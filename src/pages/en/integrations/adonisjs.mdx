@@ -4,6 +4,8 @@ description: Integrating Treblle in AdonisJS
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 To integrate Treblle with [AdonisJS](https://adonisjs.com), we provide an official SDK for Adonis - [`treblle-adonisjs`](https://github.com/Treblle/treblle-adonisjs).
 
 ## Installation
@@ -92,3 +94,7 @@ Route.group(() => {
   .prefix('/api/v1')
   .middleware('treblle')
 ```
+
+## More Integrations
+
+<TreblleIntegrations />

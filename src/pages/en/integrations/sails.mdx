@@ -4,6 +4,8 @@ description: Integrating Treblle in Sails
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 To integrate Treblle with [Sails](https://sailsjs.com), we provide an official SDK for Sails - [`treblle-sails`](https://github.com/Treblle/treblle-sails).
 
 ## Installation
@@ -72,3 +74,7 @@ module.exports.treblle = {
   routesToMonitor: ['/api/*'], // monitor routes that starts with /api
 }
 ```
+
+## More Integrations
+
+<TreblleIntegrations />

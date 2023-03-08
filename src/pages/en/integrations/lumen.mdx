@@ -4,6 +4,8 @@ description: Integrating Treblle in Lumen
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 ## Requirements
 
 - PHP 7.2+
@@ -54,7 +56,7 @@ $app->routeMiddleware([
 
 ### Step 3: Configure Treblle
 
-You need an API KEY and PROJECT ID for Treblle to work. You can get those by creating a FREE account on <https://treblle.com> and your first project. You'll get the two keys which you need to add to your .ENV file like so:
+You need an API KEY and PROJECT ID for Treblle to work. You can get those by creating a FREE account on [treblle.com](https://treblle.com) and your first project. You'll get the two keys which you need to add to your .ENV file like so:
 
 ```bash
 TREBLLE_API_KEY=YOUR_API_KEY
@@ -97,5 +99,9 @@ You can customize this list by editing the array configuration file.
 
 ## Support
 
-If you have problems of any kind feel free to reach out via <https://treblle.com> or email vedran@treblle.com, and we'll
+If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email vedran@treblle.com, and we'll
 do our best to help you out.
+
+## More Integrations
+
+<TreblleIntegrations />

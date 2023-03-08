@@ -4,6 +4,8 @@ description: Integrating Treblle in Express
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 To integrate Treblle with [Express](https://expressjs.com), we provide an official SDK for Express - [`treblle-express`](https://github.com/Treblle/treblle-express).
 
 ## Installation
@@ -52,3 +54,7 @@ app.use(
 ```
 
 > The additionalFieldsToMask config option takes in an array of strings that matches properties in your response payload or header that you want to [mask](/en/security/masked-fields)
+
+## More Integrations
+
+<TreblleIntegrations />
