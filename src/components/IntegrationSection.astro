@@ -10,7 +10,7 @@ const { integration } = Astro.props
 <h3>{integration.language}</h3>
 
 <ul
-  class="md:grid-8 mb-8 grid grid-cols-3 content-center justify-center gap-6 md:grid-cols-4"
+  class="md:grid-8 mb-8 grid list-none grid-cols-3 content-center justify-center gap-6 md:grid-cols-4"
 >
   {
     integration.platforms.map((platform) => (

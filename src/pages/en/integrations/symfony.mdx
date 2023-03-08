@@ -4,6 +4,8 @@ description: Integrating Treblle in Symfony
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 ## Requirements
 
 - PHP 7.4+
@@ -24,7 +26,7 @@ Enable it by adding it to the list of registered bundles depending on the Symfon
 
 ```php
 // config/bundles.php
-
+{
     return [
         // ...
         new Treblle\Symfony\TreblleBundle(),
@@ -111,3 +113,7 @@ Treblle\Contract\RequestDataProvider: '@App\Utils\AcmeRequestDataProvider'
 ```
 
 Now all instances depending on the `RequestDataProvider` interface will use your service.
+
+## More Integrations
+
+<TreblleIntegrations />
