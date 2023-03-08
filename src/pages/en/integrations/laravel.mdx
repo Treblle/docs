@@ -4,6 +4,8 @@ description: Integrating Treblle in Laravel
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 ## Features
 
 - All Treblle features
@@ -40,7 +42,7 @@ php artisan treblle:start
 The command guides you through a process and allows you to create an account, login to your existing account, create a
 new project and get all the .ENV keys you need to start using Treblle.
 
-You can also visit our website <https://treblle.com> and create a FREE account to get your API key and Project ID. Once
+You can also visit our website [treblle.com](https://treblle.com) and create a FREE account to get your API key and Project ID. Once
 you have to simply add them to your .ENV file:
 
 ```shell
@@ -133,5 +135,9 @@ return [
 
 ## Support
 
-If you have problems of any kind feel free to reach out via <https://treblle.com> or email vedran@treblle.com, and we'll
+If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email vedran@treblle.com, and we'll
 do our best to help you out.
+
+## More Integrations
+
+<TreblleIntegrations />

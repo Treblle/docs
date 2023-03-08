@@ -4,6 +4,8 @@ description: Integrating Treblle in Fastify
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 To integrate Treblle with [Fastify](https://fastify.io), we provide an official SDK for Fastify - [`treblle-fastify`](https://github.com/Treblle/treblle-fastify).
 
 ## Installation
@@ -48,3 +50,7 @@ fastiy.register(treblleFastify, {
   additionalFieldsToMask: ['licensee_key'],
 })
 ```
+
+## More Integrations
+
+<TreblleIntegrations />

@@ -135,3 +135,6 @@ body {
   color: var(--theme-selection-color);
   background-color: var(--theme-selection-bg);
 }
+ul {
+  list-style: disc;
+}

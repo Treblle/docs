@@ -4,6 +4,8 @@ description: Integrating Treblle in Laravel
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 ## Requirements
 
 - PHP 7.4+
@@ -22,7 +24,7 @@ $ composer require treblle/treblle-php
 
 ## Getting started
 
-Next, create a FREE account on <https://treblle.com> to get an API key and Project ID. After you have those simply
+Next, create a FREE account on [treblle.com](https://treblle.com) to get an API key and Project ID. After you have those simply
 initialize Treblle in your API code like so:
 
 ```php
@@ -145,5 +147,9 @@ $treblle = TreblleFactory::create(
 
 ## Support
 
-If you have problems of any kind feel free to reach out via <https://treblle.com> or email vedran@treblle.com and we'll
+If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email vedran@treblle.com and we'll
 do our best to help you out.
+
+## More Integrations
+
+<TreblleIntegrations />

@@ -4,6 +4,8 @@ description: Integrating Treblle in Lumen
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 [Treblle](https://treblle.com/) integration for [Directus](https://directus.io/), integrated as an extension in a form of hook, using `middlewares.after` event.
 
 ## Install
@@ -27,3 +29,7 @@ TREBLLE_PROJECT_ID=your_project_id
 # TREBLLE_SHOW_ERRORS=true
 # TREBLLE_FIELDS_TO_MASK=["password"]
 ```
+
+## More Integrations
+
+<TreblleIntegrations />
