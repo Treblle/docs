@@ -18,5 +18,16 @@ export default defineConfig({
     mdx(),
     tailwind(),
   ],
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: 'entry.[hash].js',
+          chunkFileNames: 'chunks/chunk.[hash].js',
+          assetFileNames: 'assets/asset.[hash][extname]',
+        },
+      },
+    },
+  },
   site: `http://docs.treblle.com`,
 })
