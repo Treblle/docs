@@ -7,55 +7,34 @@ import type { Platform } from '../data/integrations'
 const { platform } = Astro.props
 ---
 
-<li class="platform-card">
-  <a href={platform.link}>
+<li class="h-24 w-24 self-end">
+  <a class="no-underline hover:no-underline" href={platform.link}>
     <img
       src={platform.logo}
-      class="logo-light"
+      class="logo-light rounded-full transition-transform duration-500 hover:scale-110"
       loading="lazy"
       alt={platform.name}
     />
     <img
       src={platform.logoDark}
-      class="logo-dark"
+      class="logo-dark rounded-full hover:scale-110"
       loading="lazy"
-      alt={platform.name}
+      alt={platform.name.toUpperCase()}
     />
+    <p class="my-1 text-center">{platform.name}</p>
   </a>
 </li>
 
 <style>
-  li {
-    /* outline: 1px solid red; */
-  }
   img {
-    border-radius: 50%;
     box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3);
-    transition: all 500ms;
   }
   .logo-light {
     display: var(--logo-light-display);
     background-color: var(--color-base-white);
   }
 
-  .platform-card {
-    height: 6rem;
-    width: 6rem;
-    align-self: flex-end;
-    justify-self: baseline;
-  }
-
   .logo-dark {
     display: var(--logo-dark-display);
-  }
-  a {
-    text-decoration: none;
-    transition: all 500ms;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  img:hover {
-    transform: scale(1.1);
   }
 </style>
