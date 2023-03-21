@@ -64,6 +64,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'Node(JavaScript)', link: 'en/integrations/node' },
       { text: 'Sails', link: 'en/integrations/sails' },
       { text: 'Express', link: 'en/integrations/express' },
+      { text: 'Koa', link: 'en/integrations/koa' },
       { text: 'Strapi', link: 'en/integrations/strapi' },
       { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
       { text: 'Fastify', link: 'en/integrations/fastify' },
