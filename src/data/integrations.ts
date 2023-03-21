@@ -92,7 +92,7 @@ const integrations: Integration[] = [
       },
       {
         name: 'Koa',
-        link: '/en/integrations/node#koa-integration',
+        link: '/en/integrations/koa',
         logo: '/integrations/koa.svg',
         logoDark: '/integrations/koa-dark.svg',
       },

@@ -1,24 +1,24 @@
 ---
-title: Treblle for Express
-description: Integrating Treblle in Express
+title: Treblle for Koa
+description: Integrating Treblle in Koa
 layout: ../../../layouts/MainLayout.astro
 ---
 
 import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 
-To integrate Treblle with [Express](https://expressjs.com), we provide an official SDK for Express - [`treblle-express`](https://github.com/Treblle/treblle-express).
+To integrate Treblle with [Koa](https://koajs.com), we provide an official SDK for Koa - [`treblle-koa`](https://github.com/Treblle/treblle-koa).
 
 ## Installation
 
 ```sh
-npm i @treblle/express --save
+npm i @treblle/koa --save
 ```
 
 ## Setting up credentials
 
-`@treblle/express` expects your Treblle API key and project ID to be set as environment varibles in a `.env` file or in your production environment.
+`@treblle/koa` expects your Treblle API key and project ID to be set as environment varibles in a `.env` file or in your production environment.
 
-Below are the environment variable that will be checked by `@treblle/express`
+Below are the environment variable that will be checked by `@treblle/koa`
 
 - `TREBLLE_API_KEY`
 - `TREBLLE_PROJECT_ID`
@@ -28,21 +28,23 @@ Below are the environment variable that will be checked by `@treblle/express`
 `@treblle/express` expose a `treblle` function which returns a middlware, you can pass this function to `app.use()` to register it a middleware.
 
 ```js
-const treblle = require('@treblle/express')
-const app = express()
+const Koa = require('koa')
+const treblle = require('@treblle/koa')
+const app = new Koa()
 
 app.use(treblle())
 ```
 
-Treblle will now now start monitoring requests on your Express server.
+Treblle will now now start monitoring requests on your Koa server.
 
 ## Config options
 
 You can optionally pass a config option to the `treblle` function.
 
 ```js
-const treblle = require('@treblle/express')
-const app = express()
+const Koa = require('koa')
+const treblle = require('@treblle/koa')
+const app = new Koa()
 
 app.use(
   treblle({
