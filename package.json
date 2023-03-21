@@ -12,7 +12,8 @@
     "astro": "astro",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "algolia:index": "node scripts/send-index-to-algolia.js"
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
@@ -32,8 +33,12 @@
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
+    "algoliasearch": "^4.15.0",
+    "dotenv": "^16.0.3",
+    "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
+    "markdown-it": "^13.0.1",
     "prettier": "2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4"
   },
