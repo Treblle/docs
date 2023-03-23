@@ -12,13 +12,12 @@ export default function parseMarkdownFiles(files, dir) {
     const htmlContent = md.render(content)
 
     const filePath = path.relative(dir, file)
-
+    const url = `http://docs.treblle.com/${filePath.replace(/.mdx?/, '')}`
     return {
-      objectID: filePath,
       title: data.title,
       description: data.description,
       content: htmlContent,
-      path: filePath,
+      url,
     }
   })
 }
