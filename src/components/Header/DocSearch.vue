@@ -49,20 +49,23 @@ const toggleSearchModal = () => {
 }
 </script>
 <template>
-  <button @click="openSearchModal" class="search-button">
+  <button
+    @click="openSearchModal"
+    class="search-button open-search relative flex w-full space-x-2 rounded-sm shadow-sm shadow-black/25 sm:space-x-4 sm:px-4"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
       fill="currentColor"
-      class="bi bi-search h-4 w-4 text-gray-500"
+      class="bi bi-search h-4 w-4"
       viewBox="0 0 16 16"
     >
       <path
         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
       />
     </svg>
-    Search docs
+    <span> Search docs.. </span>
   </button>
   <Transition name="modal">
     <section
@@ -90,7 +93,7 @@ const toggleSearchModal = () => {
               <span>Search docs</span>
             </h3>
             <button
-              class="absolute -right-6 -top-8 text-lg"
+              class="absolute -right-2 -top-8 text-lg"
               @click="closeSearchModal"
             >
               &#x2717;
@@ -112,7 +115,9 @@ const toggleSearchModal = () => {
                 class="hover:no-underline focus:no-underline"
               >
                 <p class="font-bold">{{ result.title }}</p>
-                <p class="description truncate">{{ result.description }}</p>
+                <p class="truncate">
+                  {{ result.description }}
+                </p>
               </a>
             </li>
           </ul>
@@ -134,15 +139,16 @@ li {
   color: var(--docsearch-hit-color);
 }
 
-.description {
-  color: var(--theme-text-accent);
-}
-
 .search-modal {
   color: var(--docsearch-text-color);
   background-color: var(--theme-bg);
   box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3);
   border-color: var(--theme-bg);
+}
+.open-search {
+  /* box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3); */
+  color: var(--theme-code-inline-text);
+  background-color: var(--theme-code-inline-bg);
 }
 .modal-enter-from {
   opacity: 0;
