@@ -9,16 +9,15 @@ export default function parseMarkdownFiles(files, dir) {
   return files.map((file) => {
     const rawContent = fs.readFileSync(file, 'utf-8')
     const { data, content } = matter(rawContent)
-    const htmlContent = md.render(content)
+    // const htmlContent = md.render(content)
 
     const filePath = path.relative(dir, file)
-
+    const url = `http://docs.treblle.com/${filePath.replace(/.mdx?/, '')}`
     return {
-      objectID: filePath,
       title: data.title,
       description: data.description,
-      content: htmlContent,
-      path: filePath,
+      // content: htmlContent,
+      url,
     }
   })
 }

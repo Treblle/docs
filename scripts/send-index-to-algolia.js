@@ -6,12 +6,17 @@ import readFilesRecursively from './utils/read-files-recursively.js'
 dotenv.config()
 
 const CONTENT_DIR = './src/pages'
-const { ALGOLIA_APP_ID, ALGOLIA_API_KEY, ALGOLIA_INDEX_NAME } = process.env
-const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY)
-const index = client.initIndex(ALGOLIA_INDEX_NAME)
+const {
+  PUBLIC_ALGOLIA_APP_ID,
+  ALGOLIA_ADMIN_API_KEY,
+  PUBLIC_ALGOLIA_INDEX_NAME,
+} = process.env
+const client = algoliasearch(PUBLIC_ALGOLIA_APP_ID, ALGOLIA_ADMIN_API_KEY)
+const index = client.initIndex(PUBLIC_ALGOLIA_INDEX_NAME)
 
 async function sendIndexToAlgolia(data) {
   try {
+    await index.clearObjects()
     await index.saveObjects(data, { autoGenerateObjectIDIfNotExist: true })
     console.log('Successfully indexed Treblle docs content to Algolia!')
   } catch (error) {

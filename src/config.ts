@@ -34,9 +34,9 @@ export const COMMUNITY_INVITE_URL = `https://app.treblle.com/chat`
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: process.env.ALGOLIA_INDEX_NAME,
-  appId: process.env.ALGOLIA_APP_ID,
-  apiKey: process.env.ALOGLIA_API_KEY,
+  indexName: import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME,
+  appId: import.meta.env.PUBLIC_ALGOLIA_APP_ID,
+  apiKey: import.meta.env.PUBLIC_ALGOLIA_API_KEY,
 }
 
 export type Sidebar = Record<
