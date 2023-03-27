@@ -1,21 +1,18 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useMagicKeys, useFetch, useDebounceFn } from '@vueuse/core'
+import { useMagicKeys, useDebounceFn } from '@vueuse/core'
 import { ALGOLIA } from '../../config'
+import algoliasearch from 'algoliasearch'
+
+const client = algoliasearch(ALGOLIA.appId, ALGOLIA.apiKey)
+const index = client.initIndex(ALGOLIA.indexName)
+
 const keys = useMagicKeys()
 const cmdK = keys['Meta+K']
 const escapeKey = keys['escape']
 const isOpen = ref(false)
 const query = ref('')
-const searchUrl = ref(
-  `https://${ALGOLIA.appId}-dsn.algolia.net/1/indexes/${ALGOLIA.indexName}/query`
-)
-const searchHeaders = {
-  'X-Algolia-API-Key': ALGOLIA.apiKey,
-  'X-Algolia-Application-Id': ALGOLIA.appId,
-}
-
-const searchResults = ref(null)
+const searchResults = ref([])
 
 watch(cmdK, (v) => {
   if (v) toggleSearchModal()
@@ -26,11 +23,14 @@ watch(escapeKey, (v) => {
 })
 
 const debouncedFn = useDebounceFn(async () => {
-  const { data } = await useFetch(searchUrl.value, { headers: searchHeaders })
-    .post({ params: `query=${query.value}` })
-    .json()
-  searchResults.value = data.value
-}, 1000)
+  if (!query.value) {
+    searchResults.value = []
+    return
+  }
+  index.search(query.value).then(({ hits }) => {
+    searchResults.value = hits
+  })
+}, 500)
 
 watch(query, (v) => {
   if (v) debouncedFn()
@@ -93,7 +93,7 @@ const toggleSearchModal = () => {
 
           <ul class="max-h-96 overflow-auto rounded-b-sm bg-gray-100">
             <li
-              v-for="result in searchResults?.hits"
+              v-for="result in searchResults"
               class="px-4 py-2 hover:bg-gray-200"
             >
               <a :href="result.url" class="hover:no-underline">
