@@ -106,7 +106,7 @@ const toggleSearchModal = () => {
               placeholder="Start typing..."
               v-model="query"
               autofocus="true"
-              class="w-full rounded-sm border bg-transparent px-4 py-3 focus:outline-none focus:ring-0"
+              class="search-box w-full rounded-sm border bg-transparent px-4 py-3 focus:outline-none focus:ring-0"
             />
 
             <ul class="max-h-96 overflow-auto rounded-b-sm">
@@ -146,11 +146,10 @@ li {
 .search-modal {
   color: var(--docsearch-text-color);
   background-color: var(--theme-bg);
-  box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3);
+  box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.5);
   border-color: var(--theme-bg);
 }
 .open-search {
-  /* box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3); */
   color: var(--theme-code-inline-text);
   background-color: var(--theme-code-inline-bg);
 }
@@ -164,7 +163,9 @@ li {
 
 .modal-enter-from .modal-container,
 .modal-leave-to .modal-container {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+.search-box {
+  border-color: var(--theme-divider);
 }
 </style>
