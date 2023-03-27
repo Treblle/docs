@@ -67,68 +67,72 @@ const toggleSearchModal = () => {
     </svg>
     <span> Search docs.. </span>
   </button>
-  <Transition name="modal">
-    <section
-      v-if="isOpen"
-      class="modal-mask fixed inset-0 z-50 flex h-screen w-screen items-start justify-center"
-    >
-      <div
-        class="search-modal mt-28 w-full self-start rounded-sm px-6 py-8 sm:w-5/6 lg:w-2/5"
+  <Teleport to="body">
+    <Transition name="modal">
+      <section
+        v-if="isOpen"
+        class="modal-mask fixed inset-0 z-50 flex min-h-screen w-screen items-start justify-center"
       >
-        <div class="relative flex">
-          <div class="flex items-start">
-            <h3 class="flex space-x-2 text-3xl">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-search h-8 w-8 text-treblle-blue"
-                viewBox="0 0 16 16"
+        <div
+          class="search-modal mt-28 w-full self-start rounded-sm px-6 py-8 sm:w-5/6 lg:w-2/5"
+        >
+          <div class="relative flex">
+            <div class="flex items-start">
+              <h3 class="flex space-x-2 text-3xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search h-8 w-8 text-treblle-blue"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+                <span>Search docs</span>
+              </h3>
+              <button
+                class="absolute -right-2 -top-6 text-lg"
+                @click="closeSearchModal"
               >
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                />
-              </svg>
-              <span>Search docs</span>
-            </h3>
-            <button
-              class="absolute -right-2 -top-8 text-lg"
-              @click="closeSearchModal"
-            >
-              &#x2717;
-            </button>
+                &#x2717;
+              </button>
+            </div>
+          </div>
+          <div>
+            <input
+              placeholder="Start typing..."
+              v-model="query"
+              autofocus="true"
+              class="w-full rounded-sm border bg-transparent px-4 py-3 focus:outline-none focus:ring-0"
+            />
+
+            <ul class="max-h-96 overflow-auto rounded-b-sm">
+              <li v-for="result in searchResults" class="px-4 py-2">
+                <a
+                  :href="result.url"
+                  class="hover:no-underline focus:no-underline"
+                >
+                  <p class="font-bold">{{ result.title }}</p>
+                  <p class="truncate">
+                    {{ result.description }}
+                  </p>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div>
-          <input
-            placeholder="Start typing..."
-            v-model="query"
-            autofocus="true"
-            class="w-full rounded-sm border bg-transparent px-4 py-3 focus:outline-gray-100/80"
-          />
-
-          <ul class="max-h-96 overflow-auto rounded-b-sm">
-            <li v-for="result in searchResults" class="px-4 py-2">
-              <a
-                :href="result.url"
-                class="hover:no-underline focus:no-underline"
-              >
-                <p class="font-bold">{{ result.title }}</p>
-                <p class="truncate">
-                  {{ result.description }}
-                </p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </Transition>
+      </section>
+    </Transition>
+  </Teleport>
 </template>
 <style scoped>
 .modal-mask {
   background-color: var(--modal-mask-bg);
+  width: 100%;
+  height: 100%;
 }
 li:hover {
   background-color: var(--docsearch-hit-hover-background);
