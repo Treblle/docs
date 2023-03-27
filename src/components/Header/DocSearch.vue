@@ -49,7 +49,21 @@ const toggleSearchModal = () => {
 }
 </script>
 <template>
-  <button @click="openSearchModal">Search</button>
+  <button @click="openSearchModal" class="search-button">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-search h-4 w-4 text-gray-500"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+      />
+    </svg>
+    Search docs
+  </button>
   <Transition name="modal">
     <section
       v-if="isOpen"
@@ -91,14 +105,14 @@ const toggleSearchModal = () => {
             class="w-full rounded-sm border bg-transparent px-4 py-3 focus:outline-gray-100/80"
           />
 
-          <ul class="max-h-96 overflow-auto rounded-b-sm bg-gray-100">
-            <li
-              v-for="result in searchResults"
-              class="px-4 py-2 hover:bg-gray-200"
-            >
-              <a :href="result.url" class="hover:no-underline">
+          <ul class="max-h-96 overflow-auto rounded-b-sm">
+            <li v-for="result in searchResults" class="px-4 py-2">
+              <a
+                :href="result.url"
+                class="hover:no-underline focus:no-underline"
+              >
                 <p class="font-bold">{{ result.title }}</p>
-                <p class="truncate">{{ result.description }}</p>
+                <p class="description truncate">{{ result.description }}</p>
               </a>
             </li>
           </ul>
@@ -107,11 +121,25 @@ const toggleSearchModal = () => {
     </section>
   </Transition>
 </template>
-<style>
+<style scoped>
 .modal-mask {
   background-color: var(--modal-mask-bg);
 }
+li:hover {
+  background-color: var(--docsearch-hit-hover-background);
+}
+
+li {
+  background-color: var(--docsearch-hit-background);
+  color: var(--docsearch-hit-color);
+}
+
+.description {
+  color: var(--theme-text-accent);
+}
+
 .search-modal {
+  color: var(--docsearch-text-color);
   background-color: var(--theme-bg);
   box-shadow: 0px 0px 9px -3px hsla(var(--color-gray-5), 0.3);
   border-color: var(--theme-bg);
