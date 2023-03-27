@@ -5,7 +5,7 @@ import TreblleLogo from './TreblleLogo.astro'
 import SkipToContent from './SkipToContent.astro'
 import SidebarToggle from './SidebarToggle'
 import LanguageSelect from './LanguageSelect'
-import Search from './Search'
+import DocSearch from './DocSearch.vue'
 
 type Props = {
   currentPage: string
@@ -33,7 +33,7 @@ const lang = getLanguageFromURL(currentPage)
       )
     }
     <div class="search-item">
-      <Search client:idle />
+      <DocSearch client:idle />
     </div>
   </nav>
 </header>
