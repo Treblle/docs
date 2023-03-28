@@ -23,16 +23,16 @@ watch(escapeKey, (v) => {
 })
 
 const debouncedFn = useDebounceFn(async () => {
-  if (!query.value) {
-    searchResults.value = []
-    return
-  }
   index.search(query.value).then(({ hits }) => {
     searchResults.value = hits
   })
 }, 500)
 
 watch(query, (v) => {
+  if (!query.value) {
+    searchResults.value = []
+    return
+  }
   if (v) debouncedFn()
 })
 
