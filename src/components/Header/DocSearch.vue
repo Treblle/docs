@@ -13,7 +13,7 @@ const escapeKey = keys['escape']
 const isOpen = ref(false)
 const query = ref('')
 const searchResults = ref([])
-
+const showDiscordCTA = ref(false)
 watch(cmdK, (v) => {
   if (v) toggleSearchModal()
 })
@@ -28,6 +28,11 @@ const debouncedFn = useDebounceFn(async () => {
     return
   }
   index.search(query.value).then(({ hits }) => {
+    if (hits.length === 0) {
+      showDiscordCTA.value = true
+    } else {
+      showDiscordCTA.value = false
+    }
     searchResults.value = hits
   })
 }, 500)
@@ -74,7 +79,7 @@ const toggleSearchModal = () => {
         class="modal-mask fixed inset-0 z-50 flex min-h-screen w-screen items-start justify-center"
       >
         <div
-          class="search-modal mt-28 w-full self-start rounded-sm px-6 py-8 sm:w-5/6 lg:w-2/5"
+          class="search-modal mt-28 w-full self-start rounded-sm px-6 py-8 sm:w-5/6 lg:w-7/12 xl:w-5/12"
         >
           <div class="relative flex">
             <div class="flex items-start">
@@ -109,7 +114,10 @@ const toggleSearchModal = () => {
               class="search-box w-full rounded-sm border bg-transparent px-4 py-3 focus:outline-none focus:ring-0"
             />
 
-            <ul class="max-h-96 overflow-auto rounded-b-sm">
+            <ul
+              class="max-h-96 overflow-auto rounded-b-sm"
+              v-if="searchResults"
+            >
               <li v-for="result in searchResults" class="px-4 py-2">
                 <a
                   :href="result.url"
@@ -122,6 +130,25 @@ const toggleSearchModal = () => {
                 </a>
               </li>
             </ul>
+            <footer
+              v-if="showDiscordCTA"
+              class="my-4 flex flex-col flex-wrap space-y-6 sm:flex-row sm:justify-between"
+            >
+              <section class="text-center sm:text-left">
+                <p class="text-lg font-bold">
+                  Didn't find what you were looking for?
+                </p>
+                <p class="text-sm">Let us help you.</p>
+              </section>
+              <section class="">
+                <a
+                  href="https://treblle.com/chat"
+                  target="_blanks"
+                  class="rounded-sm bg-discord-blue-600 px-5 py-2 text-discord-blue-100 transition-colors hover:bg-discord-blue-700 hover:no-underline focus:no-underline"
+                  >Take me to discord</a
+                >
+              </section>
+            </footer>
           </div>
         </div>
       </section>
