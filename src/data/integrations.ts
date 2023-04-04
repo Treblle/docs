@@ -127,7 +127,7 @@ const integrations: Integration[] = [
       },
       {
         name: 'Rails',
-        link: '/en/integrations/rails',
+        link: '/en/integrations/ruby',
         logo: '/integrations/rails.svg',
         logoDark: '/integrations/rails-dark.svg',
       },
