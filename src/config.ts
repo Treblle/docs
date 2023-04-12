@@ -97,17 +97,15 @@ export const SIDEBAR: Sidebar = {
 export const getCurrentPageFilePath = async (
   currentPage: string
 ): Promise<string> => {
-  const docsPages = await import.meta.glob('./pages/en/**/*.md(x)')
+  const docsPages = await import.meta.glob('./pages/en/**/*.{md,mdx}')
   const docsFiles = Object.keys(docsPages)
 
   const [docsFile] = docsFiles.filter((file) => file.includes(currentPage))
-  const matchedExtension = docsFile.match(/\.(?<extension>mdx|md)$/)
-
+  const matchedExtension = docsFile?.match(/\.(?<extension>mdx|md)$/)
   const fileExtension = matchedExtension?.groups?.extension ?? 'md'
   const currentFile = `src/pages${currentPage.replace(
     /\/$/,
     ''
   )}.${fileExtension}`
-
   return currentFile
 }
