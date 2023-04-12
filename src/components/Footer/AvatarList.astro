@@ -1,14 +1,13 @@
 ---
-import { getCurrentPageFilePath } from '../../config'
+///
 // fetch all commits for just this page's path
 type Props = {
   path: string
 }
+const { path } = Astro.props as Props
 
-const currentFile = await getCurrentPageFilePath(Astro.url.pathname)
-
-const url = `https://api.github.com/repos/Treblle/docs/commits?path=${currentFile}`
-const commitsURL = `https://github.com/Treblle/docs/commits/main/${currentFile}`
+const url = `https://api.github.com/repos/Treblle/docs/commits?path=${path}`
+const commitsURL = `https://github.com/Treblle/docs/commits/main/${path}`
 
 type Commit = {
   author: {
