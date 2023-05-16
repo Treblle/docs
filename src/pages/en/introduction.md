@@ -14,12 +14,13 @@ By integrating Treblle to your API, you get the following features out of the bo
 
 - Real-time API monitoring and logging
 - Auto-generated [API documentation](/en/dashboard/api-documentation) with <a href="https://swagger.io/specification/" target="_blank">Open API Specification</a> support
-- API analytics
+- [API analytics](/en/dashboard/api-analytics)
 - [API quality scoring](/en/dashboard/api-score)
+- [API security](/en/dashboard/api-security)
 - One-click testing
 - API management on the go
-- Share request
-- Error reporting
+- [Share request](/en/dashboard/requests#share-request)
+- [Error reporting](/en/dashboard/problems)
 
 ## Getting Started
 
