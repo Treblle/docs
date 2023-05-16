@@ -84,6 +84,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'API Score', link: 'en/dashboard/api-score' },
       { text: 'API Analytics', link: 'en/dashboard/api-analytics' },
       { text: 'API Documentation', link: 'en/dashboard/api-documentation' },
+      { text: 'API Security', link: 'en/dashboard/api-security' },
     ],
     Security: [
       { text: 'Masked fields', link: 'en/security/masked-fields' },
