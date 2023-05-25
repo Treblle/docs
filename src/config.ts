@@ -21,6 +21,7 @@ export type Frontmatter = {
   dir?: 'ltr' | 'rtl'
   ogLocale?: string
   lang?: string
+  file: string
 }
 
 export const KNOWN_LANGUAGES = {
@@ -34,9 +35,9 @@ export const COMMUNITY_INVITE_URL = `https://app.treblle.com/chat`
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: process.env.ALGOLIA_INDEX_NAME,
-  appId: process.env.ALGOLIA_APP_ID,
-  apiKey: process.env.ALOGLIA_API_KEY,
+  indexName: import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME,
+  appId: import.meta.env.PUBLIC_ALGOLIA_APP_ID,
+  apiKey: import.meta.env.PUBLIC_ALGOLIA_API_KEY,
 }
 
 export type Sidebar = Record<
@@ -64,6 +65,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'Node(JavaScript)', link: 'en/integrations/node' },
       { text: 'Sails', link: 'en/integrations/sails' },
       { text: 'Express', link: 'en/integrations/express' },
+      { text: 'Koa', link: 'en/integrations/koa' },
       { text: 'Strapi', link: 'en/integrations/strapi' },
       { text: 'AdonisJS', link: 'en/integrations/adonisjs' },
       { text: 'Fastify', link: 'en/integrations/fastify' },
@@ -82,6 +84,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'API Score', link: 'en/dashboard/api-score' },
       { text: 'API Analytics', link: 'en/dashboard/api-analytics' },
       { text: 'API Documentation', link: 'en/dashboard/api-documentation' },
+      { text: 'API Security', link: 'en/dashboard/api-security' },
     ],
     Security: [
       { text: 'Masked fields', link: 'en/security/masked-fields' },

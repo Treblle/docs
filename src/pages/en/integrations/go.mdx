@@ -4,6 +4,8 @@ description: Integrating Treblle in Go
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
 ## Introduction
 
 Trebble middleware for Go works with applications based on `net/http`.
@@ -42,3 +44,7 @@ After that, just use the middleware with any of your handlers:
 mux := http.NewServeMux()
 mux.Handle("/", treblle.Middleware(yourHandler))
 ```
+
+## More Integrations
+
+<TreblleIntegrations />

@@ -4,6 +4,18 @@ description: Integrating Treblle in Express
 layout: ../../../layouts/MainLayout.astro
 ---
 
+import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/5Y5uN8h0RsM"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
 To integrate Treblle with [Express](https://expressjs.com), we provide an official SDK for Express - [`treblle-express`](https://github.com/Treblle/treblle-express).
 
 ## Installation
@@ -14,7 +26,7 @@ npm i @treblle/express --save
 
 ## Setting up credentials
 
-`@treblle/express` expects your Treblle API key and project ID to be set as environment varible in a `.env` file or in your production environment.
+`@treblle/express` expects your Treblle API key and project ID to be set as environment varibles in a `.env` file or in your production environment.
 
 Below are the environment variable that will be checked by `@treblle/express`
 
@@ -52,3 +64,7 @@ app.use(
 ```
 
 > The additionalFieldsToMask config option takes in an array of strings that matches properties in your response payload or header that you want to [mask](/en/security/masked-fields)
+
+## More Integrations
+
+<TreblleIntegrations />

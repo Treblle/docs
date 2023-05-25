@@ -9,24 +9,12 @@ const { integration } = Astro.props
 
 <h3>{integration.language}</h3>
 
-<ul>
+<ul
+  class="md:grid-8 mb-16 grid list-none grid-cols-3 content-center justify-center gap-x-6 gap-y-9 md:grid-cols-4"
+>
   {
     integration.platforms.map((platform) => (
       <PlatformCard platform={platform} />
     ))
   }
 </ul>
-
-<style>
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
-    justify-content: center;
-    align-content: center;
-  }
-</style>

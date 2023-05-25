@@ -1,9 +1,11 @@
 ---
+///
 // fetch all commits for just this page's path
 type Props = {
   path: string
 }
 const { path } = Astro.props as Props
+
 const url = `https://api.github.com/repos/Treblle/docs/commits?path=${path}`
 const commitsURL = `https://github.com/Treblle/docs/commits/main/${path}`
 
@@ -77,7 +79,7 @@ const additionalContributors = unique.length - recentContributors.length // list
     {
       recentContributors.map((item) => (
         <li>
-          <a href={`https://github.com/${item.login}`}>
+          <a href={`https://github.com/${item.login}`} target="_blank">
             <img
               alt={`Contributor ${item.login}`}
               title={`Contributor ${item.login}`}
@@ -95,13 +97,20 @@ const additionalContributors = unique.length - recentContributors.length // list
       <span>
         <a
           href={commitsURL}
+          target="_blank"
         >{`and ${additionalContributors} additional contributor${
           additionalContributors > 1 ? 's' : ''
         }.`}</a>
       </span>
     )
   }
-  {unique.length === 0 && <a href={commitsURL}>Contributors</a>}
+  {
+    unique.length === 0 && (
+      <a href={commitsURL} target="_blank">
+        Contributors
+      </a>
+    )
+  }
 </div>
 
 <style>

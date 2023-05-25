@@ -92,7 +92,7 @@ const integrations: Integration[] = [
       },
       {
         name: 'Koa',
-        link: '/en/integrations/node#koa-integration',
+        link: '/en/integrations/koa',
         logo: '/integrations/koa.svg',
         logoDark: '/integrations/koa-dark.svg',
       },
@@ -127,7 +127,7 @@ const integrations: Integration[] = [
       },
       {
         name: 'Rails',
-        link: '/en/integrations/rails',
+        link: '/en/integrations/ruby',
         logo: '/integrations/rails.svg',
         logoDark: '/integrations/rails-dark.svg',
       },
