@@ -104,7 +104,7 @@ You can customize this list by editing your configuration file. If you did not p
 this command first:
 
 ```bash
-php artisan vendor:publish --tag=treblle
+php artisan vendor:publish --tag=treblle-config
 ```
 
 This will create a file at "config/treblle.php". Then, open this file and tweak the masked fields:
