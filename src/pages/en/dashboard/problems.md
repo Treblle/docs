@@ -4,7 +4,7 @@ description: Problems are code base errors captured by the Treblle SDK. When Tre
 layout: ../../../layouts/MainLayout.astro
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tqjh7a_CsSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tqjh7a_CsSI" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Problems are code base errors captured by the Treblle SDK. When Treblle captures an error we will show it in the problems tab of a project
 
