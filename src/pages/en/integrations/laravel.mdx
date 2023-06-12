@@ -39,11 +39,11 @@ terminal:
 php artisan treblle:start
 ```
 
-The command guides you through a process and allows you to create an account, login to your existing account, create a
-new project and get all the .ENV keys you need to start using Treblle.
+The command guides you through a setup process and allows you to create an account, login to your existing account, create a
+new project and get all the `.env` keys you need to start using Treblle.
 
-You can also visit our website [treblle.com](https://treblle.com) and create a FREE account to get your API key and Project ID. Once
-you have to simply add them to your .ENV file:
+You can also visit our website [treblle.com](https://treblle.com) and create a free account to get your API key and Project ID. Once
+you have both your API key and project ID, simply add them to your `.env` file:
 
 ```shell
 TREBLLE_API_KEY=YOUR_API_KEY
@@ -86,7 +86,7 @@ alongside other features like: auto-generated documentation, error tracking, ana
 
 ## Configuration options
 
-You can configure Treblle using just .ENV variables:
+You can configure Treblle using just `.env` variables:
 
 ```shell
 TREBLLE_IGNORED_ENV=local,dev,test
@@ -109,7 +109,7 @@ this command first:
 php artisan vendor:publish --tag=treblle
 ```
 
-This will create a file at "config/treblle.php". Then, open this file and tweak the masked fields:
+This will create a file at `config/treblle.php`. Then, open this file and tweak the masked fields:
 
 ```php
 return [
@@ -135,7 +135,7 @@ return [
 
 ## Support
 
-If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email vedran@treblle.com, and we'll
+If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email hello@treblle.com, and we'll
 do our best to help you out.
 
 ## More Integrations
