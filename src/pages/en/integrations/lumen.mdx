@@ -38,7 +38,7 @@ mkdir -p config
 cp vendor/treblle/treblle-lumen/config/treblle.php config/treblle.php
 ```
 
-Now we can have Lumen load the config file. We do that by adding a new line in `bootstrap/app.php`, under the _Register Config Files_ section, like so:
+Now we can have Lumen load the config file. We do that by adding a new line in `bootstrap/app.php`, under the **Register Config Files** section, like so:
 
 ```php
 $app->configure('treblle');
@@ -56,7 +56,7 @@ $app->routeMiddleware([
 
 ### Step 3: Configure Treblle
 
-You need an API KEY and PROJECT ID for Treblle to work. You can get those by creating a FREE account on [treblle.com](https://treblle.com) and your first project. You'll get the two keys which you need to add to your .ENV file like so:
+You need an API key and Project ID for Treblle to work. You can get those by creating a free account on [treblle.com](https://treblle.com) and your first project. You'll get the two keys which you need to add to your `.env` file like so:
 
 ```bash
 TREBLLE_API_KEY=YOUR_API_KEY
@@ -85,7 +85,7 @@ You can configure Treblle using just .ENV variables:
 TREBLLE_IGNORED_ENV=local,dev,test
 ```
 
-Define which environments Treblle should NOT LOG at all. By default, Treblle will log all environments except local, dev
+Define which environments Treblle should not log at all. By default, Treblle will log all environments except local, dev
 and test. If you want to change that you can define your own ignored environments by using a comma separated list, or
 allow all environments by leaving the value empty.
 
@@ -99,7 +99,7 @@ You can customize this list by editing the array configuration file.
 
 ## Support
 
-If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email vedran@treblle.com, and we'll
+If you have problems of any kind feel free to reach out via [treblle.com](https://treblle.com) or email hello@treblle.com, and we'll
 do our best to help you out.
 
 ## More Integrations
