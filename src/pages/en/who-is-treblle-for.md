@@ -4,13 +4,15 @@ description: Treblle is for both builders and consumers of APIs so from DevOps t
 layout: ../../layouts/MainLayout.astro
 ---
 
-Treblle was designed for both non-technical and technical roles that monitor, analyze and manage APIs, and technical roles that build, ship and maintain them on daily basis.
+Treblle was designed for both technical and non-technical roles that work with APIs.
+
+Whether you monitor, analyze and manage APIs, or you build, ship and maintain APIs on daily basis, Treblle is for you.
 
 HTTP APIs or as it is commonly known - APIs(Application Programming Interfaces) - are interfaces that allow communication between different software systems using the HTTP protocol.
 
-They are used to build web applicatiions and mobile apps as well as integrated with other systems, and automate processes. Like when you pay for a product via Stripe, you are using the Stripe's payment APIs.
+They are used to build web applications and mobile apps as well as integrated with other systems, and automate processes. Like when you pay for a product via Stripe, you are using the Stripe's payment APIs.
 
-So when you build or consume APIs, you spend a lot of time on every stage of the API lifecycle on doing things like:
+So when you build or consume APIs, you spend a lot of time on every stage of the API lifecycle doing things like:
 
 - Administration
 - Writing documentations
