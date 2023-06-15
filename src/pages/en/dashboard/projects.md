@@ -15,7 +15,7 @@ A project can be:
 
 ## Creating a project
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3pBIJhua7ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3pBIJhua7ac" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 To create a project, <a href="https://app.treblle.com/login" target="_blank">log in</a> to Treblle and head over to your Treblle <a href="https://app.treblle.com">dashboard</a>, click on the <a href="https://app.treblle.com/projects/create" target="_blank">Create new project</a> link and you will be presented with a form in the next page to fill in required details for your new project.
 

@@ -4,7 +4,7 @@ description: Requests are calls to your API endpoints. In Treblle you can find r
 layout: ../../../layouts/MainLayout.astro
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3Q2EmCE0iqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3Q2EmCE0iqo" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Requests are calls to your API [endpoints](/en/dashboard/endpoints).
 

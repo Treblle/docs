@@ -143,7 +143,7 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`
   <body>
     <Header currentPage={currentPage} />
     <main class="layout">
-      <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
+      <aside id="grid-left" class="grid-sidebar" aria-label="Site Navigation">
         <LeftSidebar currentPage={currentPage} />
       </aside>
       <div id="grid-main">
@@ -176,7 +176,11 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`
           </footer>
         </PageContent>
       </div>
-      <aside id="grid-right" class="grid-sidebar" title="Table of Contents">
+      <aside
+        id="grid-right"
+        class="grid-sidebar"
+        aria-label="Table of Contents"
+      >
         <RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
       </aside>
     </main>

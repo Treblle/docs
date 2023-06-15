@@ -19,6 +19,12 @@
   align-items: center;
   justify-content: center;
   opacity: 0.5;
+  transition: all 0.2s;
+}
+
+.theme-toggle label:not(.checked):hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .theme-toggle .checked {
