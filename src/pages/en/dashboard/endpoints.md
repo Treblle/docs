@@ -4,7 +4,7 @@ description: Endpoints are used to represent a part of your API that can be acce
 layout: ../../../layouts/MainLayout.astro
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Iu9FNsDC-vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Iu9FNsDC-vY" aria-label="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Your API endpoints are the URIs that exposes a particular part of your API for communications via [requests](/en/dashboard/requests).
 
