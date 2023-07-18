@@ -41,18 +41,42 @@ After that, just use the middleware with any of your handlers:
 
 ```go
 mux := http.NewServeMux()
-mux.Handle("/", treblle.Middleware(yourHandler))
+mux.Handle("/", treblle.Middleware(http.HandlerFunc(yourHandler)))
 ```
 
 ## gorilla/mux
 
-To setup the `treblle.Middleware` in `gorilla/mux`, use it as a global middleware:
+To setup the `treblle.Middleware` in `gorilla/mux`, you can use it as a global middleware:
 
 ```go
 r := mux.NewRouter()
 r.Use(treblle.Middleware)
 ```
 
+### per-route
+
+You can also use `treblle.Middleware` as a per-route middleware just like you will use it with `net/http`:
+
+```go
+r := mux.NewRouter()
+r.Handle("/", treblle.Middleware(http.HandlerFunc(yourHandler)))
+```
+
+### Subroutes
+
+You can also use `treblle.Middleware` on `gorilla/mux` subroutes:
+
+```go
+r := mux.NewRouter()
+
+apiRouter := r.PathPrefix("/api").Subrouter()
+
+apiRouter.Use(treblle.Middleware) // Set as a middleware for this subroute
+
+apiRouter.HandleFunc("/users", yourHandler)
+```
+
 ## More Integrations
 
 <TreblleIntegrations />
+```
