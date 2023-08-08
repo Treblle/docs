@@ -52,6 +52,15 @@ TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
 
 ## Enabling Treblle on your API
 
+Your first step should be to register Treblle into your in your middleware aliases in `app/Http/Kernel.php`:
+
+```php
+protected $middlewareAliases = [
+  // the rest of your middleware aliases
+  'treblle' => \Treblle\Middlewares\TreblleMiddleware::class,
+];
+```
+
 Open the **routes/api.php** and add the Treblle middleware to either a route group like so:
 
 ```php
@@ -106,7 +115,7 @@ You can customize this list by editing your configuration file. If you did not p
 this command first:
 
 ```bash
-php artisan vendor:publish --tag=treblle
+php artisan vendor:publish --tag=treblle-config
 ```
 
 This will create a file at `config/treblle.php`. Then, open this file and tweak the masked fields:
