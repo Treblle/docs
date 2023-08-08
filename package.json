@@ -1,7 +1,7 @@
 {
   "name": "treblle-docs",
   "type": "module",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -28,7 +28,7 @@
     "@types/react": "^17.0.45",
     "@types/react-dom": "^18.0.0",
     "@vueuse/core": "^9.13.0",
-    "astro": "^2.1.5",
+    "astro": "^2.10.3",
     "preact": "^10.7.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -36,6 +36,8 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
     "algoliasearch": "^4.15.0",
     "dotenv": "^16.0.3",
     "gray-matter": "^4.0.3",
@@ -43,7 +45,8 @@
     "lint-staged": "^13.1.2",
     "markdown-it": "^13.0.1",
     "prettier": "2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.4"
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "typescript": "^5.1.6"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

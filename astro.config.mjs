@@ -32,5 +32,5 @@ export default defineConfig({
       },
     },
   },
-  site: `http://docs.treblle.com`,
+  site: `https://docs.treblle.com`,
 })
