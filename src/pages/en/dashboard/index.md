@@ -18,4 +18,4 @@ To locate your API key, in the Treblle Dashboard, on the top right hand of the n
 
 > If you are logged in already in your Treblle Dashboard, you can click on <a href="https://app.treblle.com/users/profile">this link</a> to access your account settings
 
-Once you are on your account settings page, you will find your API key on the top, simply click on the **Copy key** button to copy your API key.
+Once you are on your account settings page, you will find your API key at the top, simply click on the **Copy key** button to copy your API key.

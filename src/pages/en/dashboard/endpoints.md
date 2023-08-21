@@ -35,7 +35,7 @@ You can choose to add an endpoint to the auto-generated API docs by clicking on 
 
 ## Remove from docs
 
-Once an endpoint is already in your project's API documentations, you can remove an it from the API documentation by clicking on the dropdown menu on the top-right corner of the endpoint and click on **Remove from docs**. A confirmation modal will appear for you to click on **Confirm** if you want to proceed.
+Once an endpoint is already in your project's API documentations, you can remove it from the API documentation by clicking on the dropdown menu on the top-right corner of the endpoint and click on **Remove from docs**. A confirmation modal will appear for you to click on **Confirm** if you want to proceed.
 
 > Once you remove an endpoint from the API documentation of your project, it will no longer be visible to anyone reading the API documentation for that project
 
