@@ -31,10 +31,9 @@ If your role is one of the following listed below, Treblle is a great tool to ha
 - QA engineers
 - Engineering managers and leaders
 - DevOps managers
+- DevOps engineers
 - Product managers
 - API product managers
 - CTOs & CIOs
 - Technical leads
-- DevOps engineers
-- Mobile developers
 - Web developers
