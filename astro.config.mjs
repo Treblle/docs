@@ -33,4 +33,7 @@ export default defineConfig({
     },
   },
   site: `https://docs.treblle.com`,
+  redirects: {
+    '/': '/en/introduction',
+  },
 })
