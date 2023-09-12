@@ -14,7 +14,7 @@ You can check out [`this`](https://github.com/Treblle/treblle-utils/blob/develop
 
 ## Creating an SDK
 
-### Request/response data
+### Request/Response data
 
 To create an SDK for your framework or language, you need to make sure you can get access to the request and response data. Most often the way to do this would be via a middleware but this might not hold true for your particular use case.
 
