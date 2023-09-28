@@ -46,8 +46,8 @@ You can share a flow by clicking on the flow menu on the top right corner of a f
 
 ## Edit a flow
 
-To edit a flow click on the flow menu on the top right corner of the flow and the click on **Edit**, a modal will pop up presenting you with a form to edit the flow's name and description. Click on **Save changes** when you are done to apply the changes you've made.
+To edit a flow, click on the flow menu on the top right corner of the flow and the click on **Edit**, a modal will pop up presenting you with a form to edit the flow's name and description. Click on **Save changes** when you are done to apply the changes you've made.
 
 ## Delete a flow
 
-To delete a flow click on the flow menu on the top-right corner of the flow and click on the **Delete** button. You will be presented with a confirmation modal. Click on **Confirm** on that modal to delete the flow.
+To delete a flow, click on the flow menu on the top-right corner of the flow and click on the **Delete** button. You will be presented with a confirmation modal. Click on **Confirm** on that modal to delete the flow.
