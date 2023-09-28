@@ -34,7 +34,6 @@ export default defineConfig({
   },
   site: `https://docs.treblle.com`,
   redirects: {
-    '/': '/en/introduction',
     '/en/integrations/dotnet': '/en/integrations/net',
     '/en/integrations/rails': '/en/integrations/ruby',
     '/en/integrations/dotnet-core': '/en/integrations/net-core',
