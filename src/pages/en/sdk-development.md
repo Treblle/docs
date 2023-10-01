@@ -34,7 +34,7 @@ The last piece of logic your SDK needs to do is send the payload to Treblle. Thi
 - https://punisher.treblle.com
 - https://sicario.treblle.com
 
-You can randomly pick one of the mentioned endpoints to send the payload to. Here is an implementation in JavaScript which randomly picks and endpoint to send the payload to. This act as a sort of ad hoc load balancing strategy implemented within the SDK itself.
+You can randomly pick one of the mentioned endpoints to send the payload to. Here is an implementation in JavaScript which randomly picks an endpoint to send the payload to. This act as a sort of ad hoc load balancing strategy implemented within the SDK itself.
 
 ```js
 function getTreblleEndpoint() {
