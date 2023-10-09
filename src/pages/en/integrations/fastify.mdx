@@ -61,6 +61,66 @@ fastiy.register(treblleFastify, {
 })
 ```
 
+## Platformatic DB
+
+Since the Treblle SDK for Fastify is a Fastify plugin, you can easily set up Treblle in a [Platformatic DB](https://docs.platformatic.dev/docs/reference/db/introduction) application with the following steps:
+
+### install the SDK
+
+Run the below command to install the Treblle SDK in your Platformatic DB project
+
+```sh
+npm i @treblle/fastify --save
+```
+
+### Setup environment variables
+
+In your `.env` file, add the following environment variables for your Treblle API Key and Project ID respectively:
+
+- `PLT_TREBLLE_API_KEY`
+- `PLT_TREBLLE_PROJECT_ID`
+
+### Add plugin options
+
+Next edit your `platformatic.db.json` config file to have an `options` property with environment variable placeholders for the Treblle credentials you set earlier in your `.env` file:
+
+```json
+"plugins": {
+    "paths": [
+      {
+        "path": "./plugins",
+        "encapsulate": false,
+        "options": {
+          "treblleApiKey": "{PLT_TREBLLE_API_KEY}",
+          "treblleProjectId": "{PLT_TREBLLE_PROJECT_ID}"
+        }
+      },
+      {
+        "path": "./routes"
+      }
+    ]
+  },
+```
+
+### Setup the plugin
+
+To setup the plugin create `treblle.js` file in `plugins/` folder and add the below code:
+
+```js
+/// <reference path="../global.d.ts" />
+'use strict'
+/** @param {import('fastify').FastifyInstance} fastify */
+module.exports = async function (fastify, opts) {
+  const treblleFastify = require('@treblle/fastify')
+  fastify.register(treblleFastify, {
+    apiKey: opts.treblleApiKey,
+    projectId: opts.treblleProjectId,
+  })
+}
+```
+
+Now when a request comes into your Platformatic DB app, it will get sent to your Treblle dashboard.
+
 ## More Integrations
 
 <TreblleIntegrations />
