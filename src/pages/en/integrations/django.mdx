@@ -10,6 +10,16 @@ import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 
 - requests
 
+```shell
+$ pip install requests
+```
+
+- environ
+
+```shell
+$ pip install django-environ
+```
+
 ## Installation
 
 You can install Treblle for django via [PYPi](https://pypi.org/). Simply run the following command:
@@ -22,30 +32,50 @@ Don't forget to load the required python modules in your settings.py like so:
 
 ```py
 INSTALLED_APPS = [
-...
-'treblle',
+    ...
+    'treblle',
 ]
 ```
 
 ```py
 MIDDLEWARE_CLASSES = [
-...
-'treblle.middleware.TreblleMiddleware',
+    ...
+    'treblle.middleware.TreblleMiddleware',
 ]
 ```
 
 ## Getting started
 
-Next, create a FREE account on [Treblle](https://treblle.com) to get an API key and Project ID. After you have those simply initialize Treblle in your **settings.py** file like so for django:
+Next, create a FREE account on [Treblle](https://treblle.com) to get an API key and Project ID. Store those keys in a **.env** file, which should be in the same directory as your **settings.py** file.
+
+```shell
+TREBLLE_API_KEY=YOUR_API_KEY
+TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
+```
+
+The next step is to setup `environ` in your **settings.py** to read environmental variables.
+
+```py
+...
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
+...
+```
+
+On completion of those steps, simply initialize Treblle in your **settings.py** file like so for django:
 
 ```py
 TREBLLE_INFO = {
-'api_key': os.environ.get('TREBLLE_API_KEY'),
-'project_id': os.environ.get('TREBLLE_PROJECT_ID')
+    'api_key': env('TREBLLE_API_KEY'),
+    'project_id': env('TREBLLE_PROJECT_ID')
 }
 ```
 
 That's it. Your API requests and responses are now being sent to your Treblle project. Just by adding these lines of code you get features like: auto-documentation, real-time request/response monitoring, error tracking and so much more.
+
+> Any challenge? Repeat those steps again in case you missed something.
 
 ## Need to hide additional fields?
 
