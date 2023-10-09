@@ -5,6 +5,7 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+import CopyBody from '../../../components/CopyBody.tsx'
 
 ## Requirements
 
@@ -18,15 +19,16 @@ import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 
 You can install Treblle for PHP via [Composer](http://getcomposer.org/). Simply run the following command:
 
-```bash
-$ composer require treblle/treblle-php
-```
+<CopyBody client:load>
+  ```bash $ composer require treblle/treblle-php ```
+</CopyBody>
 
 ## Getting started
 
 Next, create a FREE account on [treblle.com](https://treblle.com) to get an API key and Project ID. After you have those simply
 initialize Treblle in your API code like so:
 
+<CopyBody client:load>
 ```php
 <?php
 
@@ -35,13 +37,15 @@ declare(strict_types=1);
 use GuzzleHttp\Client;
 use Treblle\Factory\TreblleFactory;
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once **DIR**.'/../vendor/autoload.php';
 
 error_reporting(E_ALL);
 ob_start();
 
 $treblle = TreblleFactory::create('_YOUR_API_KEY_', '_YOUR_PROJECT_ID_');
-```
+
+````
+</CopyBody>
 
 That's it. Your API requests and responses are now being sent to your Treblle project. Just by adding that line of code
 you get features like: auto-documentation, real-time request/response monitoring, error tracking and so much more.
@@ -54,6 +58,7 @@ The third parameter sent to `TreblleFactory::create` factory method is a boolean
 Treblle in debug mode. Enabling debug mode is helpful when you want to understand what's happening under-the-hood and
 allow Treblle errors to bubble up.
 
+<CopyBody client:load>
 ```php
 <?php
 
@@ -73,7 +78,9 @@ $treblle = TreblleFactory::create(
     '_YOUR_PROJECT_ID_',
     false, // Debug mode
 );
-```
+````
+
+</CopyBody>
 
 ### Masking sensitive information
 
@@ -82,6 +89,7 @@ parameters are automatically
 masked: `password, pwd, secret, password_confirmation, cc, card_number, ccv, ssn, credit_score`. You can extend this
 list by providing your own custom keywords by doing the following:
 
+<CopyBody client:load>
 ```php
 <?php
 
@@ -91,22 +99,25 @@ use GuzzleHttp\Client;
 use Treblle\Factory\TreblleFactory;
 
 // DON'T FORGET TO AUTOLOAD COMPOSER DEPENDENCIES
-require_once __DIR__.'/../vendor/autoload.php';
+require_once **DIR**.'/../vendor/autoload.php';
 
 error_reporting(E_ALL);
 ob_start();
 
-/*
-* Pass an array of words that you would like to be masked
-* as a fourth parameter when initializing Treblle
-*/
-$treblle = TreblleFactory::create(
-    '_YOUR_API_KEY_',
-    '_YOUR_PROJECT_ID_',
-    false, // Debug mode
-    ['keyword', 'maskme', 'sensitive']
-);
-```
+/\*
+
+- Pass an array of words that you would like to be masked
+- as a fourth parameter when initializing Treblle
+  \*/
+  $treblle = TreblleFactory::create(
+  '_YOUR_API_KEY_',
+  '_YOUR_PROJECT_ID_',
+  false, // Debug mode
+  ['keyword', 'maskme', 'sensitive']
+  );
+
+````
+</CopyBody>
 
 ### Overriding HTTP client and Treblle endpoint URL
 
@@ -119,6 +130,7 @@ The following values are supported:
   aspects)
 - `url` - Treblle API endpoint URL you want to use
 
+<CopyBody client:load>
 ```php
 <?php
 
@@ -143,7 +155,9 @@ $treblle = TreblleFactory::create(
     ['keyword', 'maskme', 'sensitive'],
     ['client' => new Client(), 'url' => 'https://custom.treblle.com']
 );
-```
+````
+
+</CopyBody>
 
 ## Support
 

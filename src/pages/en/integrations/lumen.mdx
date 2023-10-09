@@ -5,6 +5,7 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
+import CopyBody from '../../../components/CopyBody.tsx'
 
 ## Requirements
 
@@ -21,9 +22,9 @@ import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 
 Install Treblle for Lumen via [Composer](http://getcomposer.org/) by running the following command in your console:
 
-```bash
-composer require treblle/treblle-lumen
-```
+<CopyBody client:load>
+  ```bash composer require treblle/treblle-lumen ```
+</CopyBody>
 
 ## Getting started
 
@@ -33,46 +34,44 @@ Installing Lumen packages is a lot more complicated than Laravel packages and re
 
 The first thing we need to do is publish the Treblle config file and make sure Lumen loads it. To do that we need to copy/paste the package config file like so:
 
-```bash
-mkdir -p config
-cp vendor/treblle/treblle-lumen/config/treblle.php config/treblle.php
-```
+<CopyBody client:load>
+  ```bash mkdir -p config cp vendor/treblle/treblle-lumen/config/treblle.php
+  config/treblle.php ```
+</CopyBody>
 
 Now we can have Lumen load the config file. We do that by adding a new line in `bootstrap/app.php`, under the **Register Config Files** section, like so:
 
-```php
-$app->configure('treblle');
-```
+<CopyBody client:load>```php $app->configure('treblle'); ```</CopyBody>
 
 ### Step 2: Register middleware
 
 We need to register the Treblle middleware in Lumen. To do add a new line of code to `bootstrap/app.php`, under the Register Middleware section, like so:
 
-```php
-$app->routeMiddleware([
-    'treblle' => Treblle\Middlewares\TreblleMiddleware::class
-]);
-```
+<CopyBody client:load>
+  ```php $app->routeMiddleware([ 'treblle' =>
+  Treblle\Middlewares\TreblleMiddleware::class ]); ```
+</CopyBody>
 
 ### Step 3: Configure Treblle
 
 You need an API key and Project ID for Treblle to work. You can get those by creating a free account on [treblle.com](https://treblle.com) and your first project. You'll get the two keys which you need to add to your `.env` file like so:
 
-```bash
-TREBLLE_API_KEY=YOUR_API_KEY
-TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
-```
+<CopyBody client:load>
+  ```bash TREBLLE_API_KEY=YOUR_API_KEY TREBLLE_PROJECT_ID=YOUR_PROJECT_ID ```
+</CopyBody>
 
 ## Enable Treblle on your API
 
 Now that we've installed the package we simply need to enable it. Open **routes/web.php** and assign the **treblle** middleware to your API routes like so:
 
+<CopyBody client:load>
 ```php
 $router->group(['prefix' => 'api', 'middleware' => 'treblle'], function () use ($router) {
     $router->get('users',  ['uses' => 'UserController@index']);
     $router->post('users',  ['uses' => 'TestController@store']);
 });
 ```
+</CopyBody>
 
 **You're all set**. Next time someone makes a request to your API you will see it in real-time on your Treblle dashboard
 alongside other features like: auto-generated documentation, error tracking, analytics and API quality scoring.
@@ -81,9 +80,7 @@ alongside other features like: auto-generated documentation, error tracking, ana
 
 You can configure Treblle using just .ENV variables:
 
-```shell
-TREBLLE_IGNORED_ENV=local,dev,test
-```
+<CopyBody client:load>```shell TREBLLE_IGNORED_ENV=local,dev,test ```</CopyBody>
 
 Define which environments Treblle should not log at all. By default, Treblle will log all environments except local, dev
 and test. If you want to change that you can define your own ignored environments by using a comma separated list, or
