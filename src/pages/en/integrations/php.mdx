@@ -19,7 +19,7 @@ import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 You can install Treblle for PHP via [Composer](http://getcomposer.org/). Simply run the following command:
 
 ```bash
-$ composer require treblle/treblle-php
+    composer require treblle/treblle-php
 ```
 
 ## Getting started
@@ -35,12 +35,13 @@ declare(strict_types=1);
 use GuzzleHttp\Client;
 use Treblle\Factory\TreblleFactory;
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once **DIR**.'/../vendor/autoload.php';
 
 error_reporting(E_ALL);
 ob_start();
 
 $treblle = TreblleFactory::create('_YOUR_API_KEY_', '_YOUR_PROJECT_ID_');
+
 ```
 
 That's it. Your API requests and responses are now being sent to your Treblle project. Just by adding that line of code
@@ -91,21 +92,23 @@ use GuzzleHttp\Client;
 use Treblle\Factory\TreblleFactory;
 
 // DON'T FORGET TO AUTOLOAD COMPOSER DEPENDENCIES
-require_once __DIR__.'/../vendor/autoload.php';
+require_once **DIR**.'/../vendor/autoload.php';
 
 error_reporting(E_ALL);
 ob_start();
 
-/*
-* Pass an array of words that you would like to be masked
-* as a fourth parameter when initializing Treblle
-*/
-$treblle = TreblleFactory::create(
-    '_YOUR_API_KEY_',
-    '_YOUR_PROJECT_ID_',
-    false, // Debug mode
-    ['keyword', 'maskme', 'sensitive']
-);
+/\*
+
+- Pass an array of words that you would like to be masked
+- as a fourth parameter when initializing Treblle
+  \*/
+  $treblle = TreblleFactory::create(
+  '_YOUR_API_KEY_',
+  '_YOUR_PROJECT_ID_',
+  false, // Debug mode
+  ['keyword', 'maskme', 'sensitive']
+  );
+
 ```
 
 ### Overriding HTTP client and Treblle endpoint URL

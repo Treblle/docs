@@ -22,7 +22,7 @@ import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 Install Treblle for Lumen via [Composer](http://getcomposer.org/) by running the following command in your console:
 
 ```bash
-composer require treblle/treblle-lumen
+    composer require treblle/treblle-lumen
 ```
 
 ## Getting started
@@ -34,14 +34,13 @@ Installing Lumen packages is a lot more complicated than Laravel packages and re
 The first thing we need to do is publish the Treblle config file and make sure Lumen loads it. To do that we need to copy/paste the package config file like so:
 
 ```bash
-mkdir -p config
-cp vendor/treblle/treblle-lumen/config/treblle.php config/treblle.php
+    mkdir -p config cp vendor/treblle/treblle-lumen/config/treblle.php config/treblle.php
 ```
 
 Now we can have Lumen load the config file. We do that by adding a new line in `bootstrap/app.php`, under the **Register Config Files** section, like so:
 
 ```php
-$app->configure('treblle');
+    $app->configure('treblle');
 ```
 
 ### Step 2: Register middleware
@@ -49,9 +48,7 @@ $app->configure('treblle');
 We need to register the Treblle middleware in Lumen. To do add a new line of code to `bootstrap/app.php`, under the Register Middleware section, like so:
 
 ```php
-$app->routeMiddleware([
-    'treblle' => Treblle\Middlewares\TreblleMiddleware::class
-]);
+    $app->routeMiddleware([ 'treblle' => Treblle\Middlewares\TreblleMiddleware::class ]);
 ```
 
 ### Step 3: Configure Treblle
@@ -59,8 +56,7 @@ $app->routeMiddleware([
 You need an API key and Project ID for Treblle to work. You can get those by creating a free account on [treblle.com](https://treblle.com) and your first project. You'll get the two keys which you need to add to your `.env` file like so:
 
 ```bash
-TREBLLE_API_KEY=YOUR_API_KEY
-TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
+TREBLLE_API_KEY=YOUR_API_KEY TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
 ```
 
 ## Enable Treblle on your API
@@ -69,8 +65,8 @@ Now that we've installed the package we simply need to enable it. Open **routes/
 
 ```php
 $router->group(['prefix' => 'api', 'middleware' => 'treblle'], function () use ($router) {
-    $router->get('users',  ['uses' => 'UserController@index']);
-    $router->post('users',  ['uses' => 'TestController@store']);
+  $router->get('users',  ['uses' => 'UserController@index']);
+  $router->post('users',  ['uses' => 'TestController@store']);
 });
 ```
 

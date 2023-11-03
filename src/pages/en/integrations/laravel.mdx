@@ -46,8 +46,7 @@ You can also visit our website [treblle.com](https://treblle.com) and create a f
 you have both your API key and project ID, simply add them to your `.env` file:
 
 ```shell
-TREBLLE_API_KEY=YOUR_API_KEY
-TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
+TREBLLE_API_KEY=YOUR_API_KEY TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
 ```
 
 ## Enabling Treblle on your API
@@ -55,10 +54,8 @@ TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
 Your first step should be to register Treblle into your in your middleware aliases in `app/Http/Kernel.php`:
 
 ```php
-protected $middlewareAliases = [
-  // the rest of your middleware aliases
-  'treblle' => \Treblle\Middlewares\TreblleMiddleware::class,
-];
+    protected $middlewareAliases = [ // the rest of your middleware aliases
+  'treblle' => \Treblle\Middlewares\TreblleMiddleware::class, ];
 ```
 
 Open the **routes/api.php** and add the Treblle middleware to either a route group like so:
@@ -66,13 +63,14 @@ Open the **routes/api.php** and add the Treblle middleware to either a route gro
 ```php
 Route::middleware(['treblle'])->group(function () {
 
-  // YOUR API ROUTES GO HERE
-  Route::prefix('samples')->group(function () {
-    Route::get('{uuid}', [SampleController::class, 'view']);
-    Route::post('store', [SampleController::class, 'store']);
-  });
+// YOUR API ROUTES GO HERE
+Route::prefix('samples')->group(function () {
+Route::get('{uuid}', [SampleController::class, 'view']);
+Route::post('store', [SampleController::class, 'store']);
+});
 
 });
+
 ```
 
 or to an individual route like so:
@@ -98,7 +96,7 @@ alongside other features like: auto-generated documentation, error tracking, ana
 You can configure Treblle using just `.env` variables:
 
 ```shell
-TREBLLE_IGNORED_ENV=local,dev,test
+    TREBLLE_IGNORED_ENV=local,dev,test
 ```
 
 Define which environments Treblle should NOT LOG at all. By default, Treblle will log all environments except local, dev
@@ -115,7 +113,7 @@ You can customize this list by editing your configuration file. If you did not p
 this command first:
 
 ```bash
-php artisan vendor:publish --tag=treblle-config
+    php artisan vendor:publish --tag=treblle-config
 ```
 
 This will create a file at `config/treblle.php`. Then, open this file and tweak the masked fields:
@@ -139,7 +137,9 @@ return [
         'credit_score',
         'api_key',
     ],
+
 ];
+
 ```
 
 ## Support
@@ -150,3 +150,4 @@ do our best to help you out.
 ## More Integrations
 
 <TreblleIntegrations />
+```

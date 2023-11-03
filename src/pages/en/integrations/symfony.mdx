@@ -40,15 +40,15 @@ Configure the SDK by adding the following snippet to your project configuration.
 to `app/config/config_prod.yml`. For Symfony 4 or newer add the value to `config/packages/treblle.yaml`.
 
 ```yaml
-treblle:
-  project_id: "%env(TREBLLE_PROJECT_ID)%"
-  api_key: "%env(TREBLLE_API_KEY)%"
-  debug: false
-  masked:
-    - password
-    - api_key
-    - secret
-  endpoint_url: "https://rocknrolla.treblle.com" // optional
+    treblle:
+        project_id: "%env(TREBLLE_PROJECT_ID)%"
+        api_key: "%env(TREBLLE_API_KEY)%"
+        debug: false
+        masked:
+            - password
+            - api_key
+            - secret
+        endpoint_url: "https://rocknrolla.treblle.com" // optional
 ```
 
 ## Overriding data providers

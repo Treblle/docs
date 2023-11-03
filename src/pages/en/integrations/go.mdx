@@ -8,14 +8,14 @@ import TreblleIntegrations from '../../../components/TreblleIntegrations.astro'
 
 ## Introduction
 
-Trebble middleware for Go works with applications based on `net/http`.
+Treblle middleware for Go works with applications based on `net/http`.
 
 ## Installation
 
 Trebble uses [Go Modules](https://github.com/golang/go/wiki/Modules) to manage dependencies.
 
 ```shell
-go get github.com/treblle/treblle-go
+    go get github.com/treblle/treblle-go
 ```
 
 ## Basic configuration
@@ -26,13 +26,14 @@ Configure Treblle at the start of your `main()` function:
 import "github.com/treblle/treblle-go"
 
 func main() {
-	treblle.Configure(treblle.Configuration{
-		APIKey:     "YOUR API KEY HERE",
-		ProjectID:  "YOUR PROJECT ID HERE",
-        AdditionalFieldsToMask: []string{"password", "card_number"}, // optional, specify additional fields to mask
-	}
+treblle.Configure(treblle.Configuration{
+APIKey: "YOUR API KEY HERE",
+ProjectID: "YOUR PROJECT ID HERE",
+AdditionalFieldsToMask: []string{"password", "card_number"}, // optional, specify additional fields to mask
+}
 
     // rest of your program.
+
 }
 
 ```
@@ -49,8 +50,7 @@ mux.Handle("/", treblle.Middleware(http.HandlerFunc(yourHandler)))
 To setup the `treblle.Middleware` in `gorilla/mux`, you can use it as a global middleware:
 
 ```go
-r := mux.NewRouter()
-r.Use(treblle.Middleware)
+    r := mux.NewRouter() r.Use(treblle.Middleware)
 ```
 
 ### per-route
@@ -58,8 +58,7 @@ r.Use(treblle.Middleware)
 You can also use `treblle.Middleware` as a per-route middleware just like you will use it with `net/http`:
 
 ```go
-r := mux.NewRouter()
-r.Handle("/", treblle.Middleware(http.HandlerFunc(yourHandler)))
+    r := mux.NewRouter() r.Handle("/", treblle.Middleware(http.HandlerFunc(yourHandler)))
 ```
 
 ### Subroutes
