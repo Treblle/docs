@@ -41,5 +41,6 @@ export default defineConfig({
     '/en/sdks': '/en/integrations',
     '/sdks': '/en/integrations',
     '/integrations': '/en/integrations',
+    '/en/integrations/symfony/%5Bhttps://getcomposer.org': 'https://getcomposer.org'
   },
 })
